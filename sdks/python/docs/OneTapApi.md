@@ -40,13 +40,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OneTapApi(api_client)
     one_tap_callback_post_request = better_auth.OneTapCallbackPostRequest() # OneTapCallbackPostRequest | 
 
     try:
-        api_response = api_instance.one_tap_callback_post(one_tap_callback_post_request)
+        api_response = await api_instance.one_tap_callback_post(one_tap_callback_post_request)
         print("The response of OneTapApi->one_tap_callback_post:\n")
         pprint(api_response)
     except Exception as e:

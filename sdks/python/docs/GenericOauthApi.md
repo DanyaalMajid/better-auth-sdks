@@ -41,7 +41,7 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.GenericOauthApi(api_client)
     code = 'code_example' # str |  (optional)
@@ -50,7 +50,7 @@ with better_auth.ApiClient(configuration) as api_client:
     state = 'state_example' # str |  (optional)
 
     try:
-        api_response = api_instance.oauth2_callback_provider_id_get(code=code, error=error, error_description=error_description, state=state)
+        api_response = await api_instance.oauth2_callback_provider_id_get(code=code, error=error, error_description=error_description, state=state)
         print("The response of GenericOauthApi->oauth2_callback_provider_id_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -129,13 +129,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.GenericOauthApi(api_client)
     oauth2_link_post_request = better_auth.Oauth2LinkPostRequest() # Oauth2LinkPostRequest | 
 
     try:
-        api_response = api_instance.oauth2_link_post(oauth2_link_post_request)
+        api_response = await api_instance.oauth2_link_post(oauth2_link_post_request)
         print("The response of GenericOauthApi->oauth2_link_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -211,13 +211,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.GenericOauthApi(api_client)
     sign_in_oauth2_post_request = better_auth.SignInOauth2PostRequest() # SignInOauth2PostRequest | 
 
     try:
-        api_response = api_instance.sign_in_oauth2_post(sign_in_oauth2_post_request)
+        api_response = await api_instance.sign_in_oauth2_post(sign_in_oauth2_post_request)
         print("The response of GenericOauthApi->sign_in_oauth2_post:\n")
         pprint(api_response)
     except Exception as e:

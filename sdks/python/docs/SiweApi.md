@@ -38,13 +38,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.SiweApi(api_client)
     siwe_nonce_post_request = better_auth.SiweNoncePostRequest() # SiweNoncePostRequest | 
 
     try:
-        api_instance.siwe_nonce_post(siwe_nonce_post_request)
+        await api_instance.siwe_nonce_post(siwe_nonce_post_request)
     except Exception as e:
         print("Exception when calling SiweApi->siwe_nonce_post: %s\n" % e)
 ```
@@ -114,13 +114,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.SiweApi(api_client)
     siwe_verify_post_request = better_auth.SiweVerifyPostRequest() # SiweVerifyPostRequest | 
 
     try:
-        api_instance.siwe_verify_post(siwe_verify_post_request)
+        await api_instance.siwe_verify_post(siwe_verify_post_request)
     except Exception as e:
         print("Exception when calling SiweApi->siwe_verify_post: %s\n" % e)
 ```

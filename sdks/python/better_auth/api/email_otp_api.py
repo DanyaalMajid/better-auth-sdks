@@ -46,7 +46,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_check_verification_otp_post(
+    async def email_otp_check_verification_otp_post(
         self,
         email_otp_check_verification_otp_post_request: EmailOtpCheckVerificationOtpPostRequest,
         _request_timeout: Union[
@@ -107,11 +107,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -119,7 +119,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_check_verification_otp_post_with_http_info(
+    async def email_otp_check_verification_otp_post_with_http_info(
         self,
         email_otp_check_verification_otp_post_request: EmailOtpCheckVerificationOtpPostRequest,
         _request_timeout: Union[
@@ -180,11 +180,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -192,7 +192,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_check_verification_otp_post_without_preload_content(
+    async def email_otp_check_verification_otp_post_without_preload_content(
         self,
         email_otp_check_verification_otp_post_request: EmailOtpCheckVerificationOtpPostRequest,
         _request_timeout: Union[
@@ -253,7 +253,7 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -338,7 +338,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_reset_password_post(
+    async def email_otp_reset_password_post(
         self,
         email_otp_reset_password_post_request: EmailOtpResetPasswordPostRequest,
         _request_timeout: Union[
@@ -399,11 +399,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -411,7 +411,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_reset_password_post_with_http_info(
+    async def email_otp_reset_password_post_with_http_info(
         self,
         email_otp_reset_password_post_request: EmailOtpResetPasswordPostRequest,
         _request_timeout: Union[
@@ -472,11 +472,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -484,7 +484,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_reset_password_post_without_preload_content(
+    async def email_otp_reset_password_post_without_preload_content(
         self,
         email_otp_reset_password_post_request: EmailOtpResetPasswordPostRequest,
         _request_timeout: Union[
@@ -545,7 +545,7 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -630,7 +630,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_send_verification_otp_post(
+    async def email_otp_send_verification_otp_post(
         self,
         email_otp_send_verification_otp_post_request: EmailOtpSendVerificationOtpPostRequest,
         _request_timeout: Union[
@@ -691,11 +691,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -703,7 +703,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_send_verification_otp_post_with_http_info(
+    async def email_otp_send_verification_otp_post_with_http_info(
         self,
         email_otp_send_verification_otp_post_request: EmailOtpSendVerificationOtpPostRequest,
         _request_timeout: Union[
@@ -764,11 +764,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -776,7 +776,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_send_verification_otp_post_without_preload_content(
+    async def email_otp_send_verification_otp_post_without_preload_content(
         self,
         email_otp_send_verification_otp_post_request: EmailOtpSendVerificationOtpPostRequest,
         _request_timeout: Union[
@@ -837,7 +837,7 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -922,7 +922,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_verify_email_post(
+    async def email_otp_verify_email_post(
         self,
         email_otp_verify_email_post_request: EmailOtpVerifyEmailPostRequest,
         _request_timeout: Union[
@@ -983,11 +983,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -995,7 +995,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_verify_email_post_with_http_info(
+    async def email_otp_verify_email_post_with_http_info(
         self,
         email_otp_verify_email_post_request: EmailOtpVerifyEmailPostRequest,
         _request_timeout: Union[
@@ -1056,11 +1056,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1068,7 +1068,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def email_otp_verify_email_post_without_preload_content(
+    async def email_otp_verify_email_post_without_preload_content(
         self,
         email_otp_verify_email_post_request: EmailOtpVerifyEmailPostRequest,
         _request_timeout: Union[
@@ -1129,7 +1129,7 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1214,7 +1214,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def forget_password_email_otp_post(
+    async def forget_password_email_otp_post(
         self,
         forget_password_email_otp_post_request: ForgetPasswordEmailOtpPostRequest,
         _request_timeout: Union[
@@ -1275,11 +1275,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1287,7 +1287,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def forget_password_email_otp_post_with_http_info(
+    async def forget_password_email_otp_post_with_http_info(
         self,
         forget_password_email_otp_post_request: ForgetPasswordEmailOtpPostRequest,
         _request_timeout: Union[
@@ -1348,11 +1348,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1360,7 +1360,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def forget_password_email_otp_post_without_preload_content(
+    async def forget_password_email_otp_post_without_preload_content(
         self,
         forget_password_email_otp_post_request: ForgetPasswordEmailOtpPostRequest,
         _request_timeout: Union[
@@ -1421,7 +1421,7 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1506,7 +1506,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def sign_in_email_otp_post(
+    async def sign_in_email_otp_post(
         self,
         sign_in_email_otp_post_request: SignInEmailOtpPostRequest,
         _request_timeout: Union[
@@ -1567,11 +1567,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1579,7 +1579,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def sign_in_email_otp_post_with_http_info(
+    async def sign_in_email_otp_post_with_http_info(
         self,
         sign_in_email_otp_post_request: SignInEmailOtpPostRequest,
         _request_timeout: Union[
@@ -1640,11 +1640,11 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1652,7 +1652,7 @@ class EmailOtpApi:
 
 
     @validate_call
-    def sign_in_email_otp_post_without_preload_content(
+    async def sign_in_email_otp_post_without_preload_content(
         self,
         sign_in_email_otp_post_request: SignInEmailOtpPostRequest,
         _request_timeout: Union[
@@ -1713,7 +1713,7 @@ class EmailOtpApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -40,12 +40,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.JwtApi(api_client)
 
     try:
-        api_response = api_instance.jwks_get()
+        api_response = await api_instance.jwks_get()
         print("The response of JwtApi->jwks_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -117,12 +117,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.JwtApi(api_client)
 
     try:
-        api_response = api_instance.token_get()
+        api_response = await api_instance.token_get()
         print("The response of JwtApi->token_get:\n")
         pprint(api_response)
     except Exception as e:

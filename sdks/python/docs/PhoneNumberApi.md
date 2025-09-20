@@ -45,13 +45,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PhoneNumberApi(api_client)
     phone_number_forget_password_post_request = better_auth.PhoneNumberForgetPasswordPostRequest() # PhoneNumberForgetPasswordPostRequest | 
 
     try:
-        api_response = api_instance.phone_number_forget_password_post(phone_number_forget_password_post_request)
+        api_response = await api_instance.phone_number_forget_password_post(phone_number_forget_password_post_request)
         print("The response of PhoneNumberApi->phone_number_forget_password_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -127,13 +127,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PhoneNumberApi(api_client)
     phone_number_request_password_reset_post_request = better_auth.PhoneNumberRequestPasswordResetPostRequest() # PhoneNumberRequestPasswordResetPostRequest | 
 
     try:
-        api_response = api_instance.phone_number_request_password_reset_post(phone_number_request_password_reset_post_request)
+        api_response = await api_instance.phone_number_request_password_reset_post(phone_number_request_password_reset_post_request)
         print("The response of PhoneNumberApi->phone_number_request_password_reset_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -209,13 +209,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PhoneNumberApi(api_client)
     phone_number_reset_password_post_request = better_auth.PhoneNumberResetPasswordPostRequest() # PhoneNumberResetPasswordPostRequest | 
 
     try:
-        api_response = api_instance.phone_number_reset_password_post(phone_number_reset_password_post_request)
+        api_response = await api_instance.phone_number_reset_password_post(phone_number_reset_password_post_request)
         print("The response of PhoneNumberApi->phone_number_reset_password_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -291,13 +291,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PhoneNumberApi(api_client)
     phone_number_send_otp_post_request = better_auth.PhoneNumberSendOtpPostRequest() # PhoneNumberSendOtpPostRequest | 
 
     try:
-        api_response = api_instance.phone_number_send_otp_post(phone_number_send_otp_post_request)
+        api_response = await api_instance.phone_number_send_otp_post(phone_number_send_otp_post_request)
         print("The response of PhoneNumberApi->phone_number_send_otp_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -373,13 +373,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PhoneNumberApi(api_client)
     phone_number_verify_post_request = better_auth.PhoneNumberVerifyPostRequest() # PhoneNumberVerifyPostRequest | 
 
     try:
-        api_response = api_instance.phone_number_verify_post(phone_number_verify_post_request)
+        api_response = await api_instance.phone_number_verify_post(phone_number_verify_post_request)
         print("The response of PhoneNumberApi->phone_number_verify_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -455,13 +455,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PhoneNumberApi(api_client)
     sign_in_phone_number_post_request = better_auth.SignInPhoneNumberPostRequest() # SignInPhoneNumberPostRequest | 
 
     try:
-        api_response = api_instance.sign_in_phone_number_post(sign_in_phone_number_post_request)
+        api_response = await api_instance.sign_in_phone_number_post(sign_in_phone_number_post_request)
         print("The response of PhoneNumberApi->sign_in_phone_number_post:\n")
         pprint(api_response)
     except Exception as e:

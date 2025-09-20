@@ -44,13 +44,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.ApiKeyApi(api_client)
     api_key_create_post_request = better_auth.ApiKeyCreatePostRequest() # ApiKeyCreatePostRequest | 
 
     try:
-        api_response = api_instance.api_key_create_post(api_key_create_post_request)
+        api_response = await api_instance.api_key_create_post(api_key_create_post_request)
         print("The response of ApiKeyApi->api_key_create_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -126,13 +126,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.ApiKeyApi(api_client)
     api_key_delete_post_request = better_auth.ApiKeyDeletePostRequest() # ApiKeyDeletePostRequest |  (optional)
 
     try:
-        api_response = api_instance.api_key_delete_post(api_key_delete_post_request=api_key_delete_post_request)
+        api_response = await api_instance.api_key_delete_post(api_key_delete_post_request=api_key_delete_post_request)
         print("The response of ApiKeyApi->api_key_delete_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -207,13 +207,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.ApiKeyApi(api_client)
     id = 'id_example' # str |  (optional)
 
     try:
-        api_response = api_instance.api_key_get_get(id=id)
+        api_response = await api_instance.api_key_get_get(id=id)
         print("The response of ApiKeyApi->api_key_get_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -288,12 +288,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.ApiKeyApi(api_client)
 
     try:
-        api_response = api_instance.api_key_list_get()
+        api_response = await api_instance.api_key_list_get()
         print("The response of ApiKeyApi->api_key_list_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -366,13 +366,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.ApiKeyApi(api_client)
     api_key_update_post_request = better_auth.ApiKeyUpdatePostRequest() # ApiKeyUpdatePostRequest | 
 
     try:
-        api_response = api_instance.api_key_update_post(api_key_update_post_request)
+        api_response = await api_instance.api_key_update_post(api_key_update_post_request)
         print("The response of ApiKeyApi->api_key_update_post:\n")
         pprint(api_response)
     except Exception as e:

@@ -37,12 +37,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OneTimeTokenApi(api_client)
 
     try:
-        api_instance.one_time_token_generate_get()
+        await api_instance.one_time_token_generate_get()
     except Exception as e:
         print("Exception when calling OneTimeTokenApi->one_time_token_generate_get: %s\n" % e)
 ```
@@ -109,13 +109,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OneTimeTokenApi(api_client)
     one_time_token_verify_post_request = better_auth.OneTimeTokenVerifyPostRequest() # OneTimeTokenVerifyPostRequest | 
 
     try:
-        api_instance.one_time_token_verify_post(one_time_token_verify_post_request)
+        await api_instance.one_time_token_verify_post(one_time_token_verify_post_request)
     except Exception as e:
         print("Exception when calling OneTimeTokenApi->one_time_token_verify_post: %s\n" % e)
 ```

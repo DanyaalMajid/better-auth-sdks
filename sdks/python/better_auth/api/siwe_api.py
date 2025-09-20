@@ -38,7 +38,7 @@ class SiweApi:
 
 
     @validate_call
-    def siwe_nonce_post(
+    async def siwe_nonce_post(
         self,
         siwe_nonce_post_request: SiweNoncePostRequest,
         _request_timeout: Union[
@@ -97,11 +97,11 @@ class SiweApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -109,7 +109,7 @@ class SiweApi:
 
 
     @validate_call
-    def siwe_nonce_post_with_http_info(
+    async def siwe_nonce_post_with_http_info(
         self,
         siwe_nonce_post_request: SiweNoncePostRequest,
         _request_timeout: Union[
@@ -168,11 +168,11 @@ class SiweApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -180,7 +180,7 @@ class SiweApi:
 
 
     @validate_call
-    def siwe_nonce_post_without_preload_content(
+    async def siwe_nonce_post_without_preload_content(
         self,
         siwe_nonce_post_request: SiweNoncePostRequest,
         _request_timeout: Union[
@@ -239,7 +239,7 @@ class SiweApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -324,7 +324,7 @@ class SiweApi:
 
 
     @validate_call
-    def siwe_verify_post(
+    async def siwe_verify_post(
         self,
         siwe_verify_post_request: SiweVerifyPostRequest,
         _request_timeout: Union[
@@ -383,11 +383,11 @@ class SiweApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -395,7 +395,7 @@ class SiweApi:
 
 
     @validate_call
-    def siwe_verify_post_with_http_info(
+    async def siwe_verify_post_with_http_info(
         self,
         siwe_verify_post_request: SiweVerifyPostRequest,
         _request_timeout: Union[
@@ -454,11 +454,11 @@ class SiweApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -466,7 +466,7 @@ class SiweApi:
 
 
     @validate_call
-    def siwe_verify_post_without_preload_content(
+    async def siwe_verify_post_without_preload_content(
         self,
         siwe_verify_post_request: SiweVerifyPostRequest,
         _request_timeout: Union[
@@ -525,7 +525,7 @@ class SiweApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -39,7 +39,7 @@ class UsernameApi:
 
 
     @validate_call
-    def is_username_available_post(
+    async def is_username_available_post(
         self,
         is_username_available_post_request: IsUsernameAvailablePostRequest,
         _request_timeout: Union[
@@ -98,11 +98,11 @@ class UsernameApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -110,7 +110,7 @@ class UsernameApi:
 
 
     @validate_call
-    def is_username_available_post_with_http_info(
+    async def is_username_available_post_with_http_info(
         self,
         is_username_available_post_request: IsUsernameAvailablePostRequest,
         _request_timeout: Union[
@@ -169,11 +169,11 @@ class UsernameApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -181,7 +181,7 @@ class UsernameApi:
 
 
     @validate_call
-    def is_username_available_post_without_preload_content(
+    async def is_username_available_post_without_preload_content(
         self,
         is_username_available_post_request: IsUsernameAvailablePostRequest,
         _request_timeout: Union[
@@ -240,7 +240,7 @@ class UsernameApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -325,7 +325,7 @@ class UsernameApi:
 
 
     @validate_call
-    def sign_in_username_post(
+    async def sign_in_username_post(
         self,
         sign_in_username_post_request: SignInUsernamePostRequest,
         _request_timeout: Union[
@@ -387,11 +387,11 @@ class UsernameApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -399,7 +399,7 @@ class UsernameApi:
 
 
     @validate_call
-    def sign_in_username_post_with_http_info(
+    async def sign_in_username_post_with_http_info(
         self,
         sign_in_username_post_request: SignInUsernamePostRequest,
         _request_timeout: Union[
@@ -461,11 +461,11 @@ class UsernameApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -473,7 +473,7 @@ class UsernameApi:
 
 
     @validate_call
-    def sign_in_username_post_without_preload_content(
+    async def sign_in_username_post_without_preload_content(
         self,
         sign_in_username_post_request: SignInUsernamePostRequest,
         _request_timeout: Union[
@@ -535,7 +535,7 @@ class UsernameApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

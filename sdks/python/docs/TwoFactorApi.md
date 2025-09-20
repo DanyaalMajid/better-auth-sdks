@@ -47,13 +47,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
     two_factor_get_totp_uri_post_request = better_auth.TwoFactorGetTotpUriPostRequest() # TwoFactorGetTotpUriPostRequest | 
 
     try:
-        api_response = api_instance.two_factor_disable_post(two_factor_get_totp_uri_post_request)
+        api_response = await api_instance.two_factor_disable_post(two_factor_get_totp_uri_post_request)
         print("The response of TwoFactorApi->two_factor_disable_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -129,13 +129,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
     two_factor_enable_post_request = better_auth.TwoFactorEnablePostRequest() # TwoFactorEnablePostRequest | 
 
     try:
-        api_response = api_instance.two_factor_enable_post(two_factor_enable_post_request)
+        api_response = await api_instance.two_factor_enable_post(two_factor_enable_post_request)
         print("The response of TwoFactorApi->two_factor_enable_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -211,13 +211,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
     two_factor_generate_backup_codes_post_request = better_auth.TwoFactorGenerateBackupCodesPostRequest() # TwoFactorGenerateBackupCodesPostRequest | 
 
     try:
-        api_response = api_instance.two_factor_generate_backup_codes_post(two_factor_generate_backup_codes_post_request)
+        api_response = await api_instance.two_factor_generate_backup_codes_post(two_factor_generate_backup_codes_post_request)
         print("The response of TwoFactorApi->two_factor_generate_backup_codes_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -293,13 +293,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
     two_factor_get_totp_uri_post_request = better_auth.TwoFactorGetTotpUriPostRequest() # TwoFactorGetTotpUriPostRequest | 
 
     try:
-        api_response = api_instance.two_factor_get_totp_uri_post(two_factor_get_totp_uri_post_request)
+        api_response = await api_instance.two_factor_get_totp_uri_post(two_factor_get_totp_uri_post_request)
         print("The response of TwoFactorApi->two_factor_get_totp_uri_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -374,12 +374,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
 
     try:
-        api_response = api_instance.two_factor_send_otp_post()
+        api_response = await api_instance.two_factor_send_otp_post()
         print("The response of TwoFactorApi->two_factor_send_otp_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -452,13 +452,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
     two_factor_verify_backup_code_post_request = better_auth.TwoFactorVerifyBackupCodePostRequest() # TwoFactorVerifyBackupCodePostRequest | 
 
     try:
-        api_response = api_instance.two_factor_verify_backup_code_post(two_factor_verify_backup_code_post_request)
+        api_response = await api_instance.two_factor_verify_backup_code_post(two_factor_verify_backup_code_post_request)
         print("The response of TwoFactorApi->two_factor_verify_backup_code_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -534,13 +534,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
     two_factor_verify_otp_post_request = better_auth.TwoFactorVerifyOtpPostRequest() # TwoFactorVerifyOtpPostRequest | 
 
     try:
-        api_response = api_instance.two_factor_verify_otp_post(two_factor_verify_otp_post_request)
+        api_response = await api_instance.two_factor_verify_otp_post(two_factor_verify_otp_post_request)
         print("The response of TwoFactorApi->two_factor_verify_otp_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -616,13 +616,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.TwoFactorApi(api_client)
     two_factor_verify_totp_post_request = better_auth.TwoFactorVerifyTotpPostRequest() # TwoFactorVerifyTotpPostRequest | 
 
     try:
-        api_response = api_instance.two_factor_verify_totp_post(two_factor_verify_totp_post_request)
+        api_response = await api_instance.two_factor_verify_totp_post(two_factor_verify_totp_post_request)
         print("The response of TwoFactorApi->two_factor_verify_totp_post:\n")
         pprint(api_response)
     except Exception as e:

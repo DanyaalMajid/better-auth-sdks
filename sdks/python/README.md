@@ -73,13 +73,13 @@ configuration = better_auth.Configuration(
 
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     admin_has_permission_post_request = better_auth.AdminHasPermissionPostRequest() # AdminHasPermissionPostRequest |  (optional)
 
     try:
-        api_response = api_instance.admin_has_permission_post(admin_has_permission_post_request=admin_has_permission_post_request)
+        api_response = await api_instance.admin_has_permission_post(admin_has_permission_post_request=admin_has_permission_post_request)
         print("The response of AdminApi->admin_has_permission_post:\n")
         pprint(api_response)
     except ApiException as e:

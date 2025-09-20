@@ -38,12 +38,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.MultiSessionApi(api_client)
 
     try:
-        api_instance.multi_session_list_device_sessions_get()
+        await api_instance.multi_session_list_device_sessions_get()
     except Exception as e:
         print("Exception when calling MultiSessionApi->multi_session_list_device_sessions_get: %s\n" % e)
 ```
@@ -113,13 +113,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.MultiSessionApi(api_client)
     multi_session_revoke_post_request = better_auth.MultiSessionRevokePostRequest() # MultiSessionRevokePostRequest | 
 
     try:
-        api_response = api_instance.multi_session_revoke_post(multi_session_revoke_post_request)
+        api_response = await api_instance.multi_session_revoke_post(multi_session_revoke_post_request)
         print("The response of MultiSessionApi->multi_session_revoke_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -195,13 +195,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.MultiSessionApi(api_client)
     multi_session_set_active_post_request = better_auth.MultiSessionSetActivePostRequest() # MultiSessionSetActivePostRequest | 
 
     try:
-        api_response = api_instance.multi_session_set_active_post(multi_session_set_active_post_request)
+        api_response = await api_instance.multi_session_set_active_post(multi_session_set_active_post_request)
         print("The response of MultiSessionApi->multi_session_set_active_post:\n")
         pprint(api_response)
     except Exception as e:

@@ -45,13 +45,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.EmailOtpApi(api_client)
     email_otp_check_verification_otp_post_request = better_auth.EmailOtpCheckVerificationOtpPostRequest() # EmailOtpCheckVerificationOtpPostRequest | 
 
     try:
-        api_response = api_instance.email_otp_check_verification_otp_post(email_otp_check_verification_otp_post_request)
+        api_response = await api_instance.email_otp_check_verification_otp_post(email_otp_check_verification_otp_post_request)
         print("The response of EmailOtpApi->email_otp_check_verification_otp_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -126,13 +126,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.EmailOtpApi(api_client)
     email_otp_reset_password_post_request = better_auth.EmailOtpResetPasswordPostRequest() # EmailOtpResetPasswordPostRequest | 
 
     try:
-        api_instance.email_otp_reset_password_post(email_otp_reset_password_post_request)
+        await api_instance.email_otp_reset_password_post(email_otp_reset_password_post_request)
     except Exception as e:
         print("Exception when calling EmailOtpApi->email_otp_reset_password_post: %s\n" % e)
 ```
@@ -206,13 +206,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.EmailOtpApi(api_client)
     email_otp_send_verification_otp_post_request = better_auth.EmailOtpSendVerificationOtpPostRequest() # EmailOtpSendVerificationOtpPostRequest | 
 
     try:
-        api_response = api_instance.email_otp_send_verification_otp_post(email_otp_send_verification_otp_post_request)
+        api_response = await api_instance.email_otp_send_verification_otp_post(email_otp_send_verification_otp_post_request)
         print("The response of EmailOtpApi->email_otp_send_verification_otp_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -288,13 +288,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.EmailOtpApi(api_client)
     email_otp_verify_email_post_request = better_auth.EmailOtpVerifyEmailPostRequest() # EmailOtpVerifyEmailPostRequest | 
 
     try:
-        api_response = api_instance.email_otp_verify_email_post(email_otp_verify_email_post_request)
+        api_response = await api_instance.email_otp_verify_email_post(email_otp_verify_email_post_request)
         print("The response of EmailOtpApi->email_otp_verify_email_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -370,13 +370,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.EmailOtpApi(api_client)
     forget_password_email_otp_post_request = better_auth.ForgetPasswordEmailOtpPostRequest() # ForgetPasswordEmailOtpPostRequest | 
 
     try:
-        api_response = api_instance.forget_password_email_otp_post(forget_password_email_otp_post_request)
+        api_response = await api_instance.forget_password_email_otp_post(forget_password_email_otp_post_request)
         print("The response of EmailOtpApi->forget_password_email_otp_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -452,13 +452,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.EmailOtpApi(api_client)
     sign_in_email_otp_post_request = better_auth.SignInEmailOtpPostRequest() # SignInEmailOtpPostRequest | 
 
     try:
-        api_response = api_instance.sign_in_email_otp_post(sign_in_email_otp_post_request)
+        api_response = await api_instance.sign_in_email_otp_post(sign_in_email_otp_post_request)
         print("The response of EmailOtpApi->sign_in_email_otp_post:\n")
         pprint(api_response)
     except Exception as e:

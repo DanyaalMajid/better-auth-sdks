@@ -40,7 +40,7 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.MagicLinkApi(api_client)
     token = 'token_example' # str |  (optional)
@@ -49,7 +49,7 @@ with better_auth.ApiClient(configuration) as api_client:
     new_user_callback_url = 'new_user_callback_url_example' # str |  (optional)
 
     try:
-        api_response = api_instance.magic_link_verify_get(token=token, callback_url=callback_url, error_callback_url=error_callback_url, new_user_callback_url=new_user_callback_url)
+        api_response = await api_instance.magic_link_verify_get(token=token, callback_url=callback_url, error_callback_url=error_callback_url, new_user_callback_url=new_user_callback_url)
         print("The response of MagicLinkApi->magic_link_verify_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -128,13 +128,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.MagicLinkApi(api_client)
     sign_in_magic_link_post_request = better_auth.SignInMagicLinkPostRequest() # SignInMagicLinkPostRequest | 
 
     try:
-        api_response = api_instance.sign_in_magic_link_post(sign_in_magic_link_post_request)
+        api_response = await api_instance.sign_in_magic_link_post(sign_in_magic_link_post_request)
         print("The response of MagicLinkApi->sign_in_magic_link_post:\n")
         pprint(api_response)
     except Exception as e:

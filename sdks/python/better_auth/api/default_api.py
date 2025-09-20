@@ -78,7 +78,7 @@ class DefaultApi:
 
 
     @validate_call
-    def account_info_post(
+    async def account_info_post(
         self,
         account_info_post_request: AccountInfoPostRequest,
         _request_timeout: Union[
@@ -139,11 +139,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -151,7 +151,7 @@ class DefaultApi:
 
 
     @validate_call
-    def account_info_post_with_http_info(
+    async def account_info_post_with_http_info(
         self,
         account_info_post_request: AccountInfoPostRequest,
         _request_timeout: Union[
@@ -212,11 +212,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -224,7 +224,7 @@ class DefaultApi:
 
 
     @validate_call
-    def account_info_post_without_preload_content(
+    async def account_info_post_without_preload_content(
         self,
         account_info_post_request: AccountInfoPostRequest,
         _request_timeout: Union[
@@ -285,7 +285,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -370,7 +370,7 @@ class DefaultApi:
 
 
     @validate_call
-    def change_email_post(
+    async def change_email_post(
         self,
         change_email_post_request: ChangeEmailPostRequest,
         _request_timeout: Union[
@@ -431,11 +431,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -443,7 +443,7 @@ class DefaultApi:
 
 
     @validate_call
-    def change_email_post_with_http_info(
+    async def change_email_post_with_http_info(
         self,
         change_email_post_request: ChangeEmailPostRequest,
         _request_timeout: Union[
@@ -504,11 +504,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -516,7 +516,7 @@ class DefaultApi:
 
 
     @validate_call
-    def change_email_post_without_preload_content(
+    async def change_email_post_without_preload_content(
         self,
         change_email_post_request: ChangeEmailPostRequest,
         _request_timeout: Union[
@@ -577,7 +577,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -662,7 +662,7 @@ class DefaultApi:
 
 
     @validate_call
-    def change_password_post(
+    async def change_password_post(
         self,
         change_password_post_request: ChangePasswordPostRequest,
         _request_timeout: Union[
@@ -723,11 +723,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -735,7 +735,7 @@ class DefaultApi:
 
 
     @validate_call
-    def change_password_post_with_http_info(
+    async def change_password_post_with_http_info(
         self,
         change_password_post_request: ChangePasswordPostRequest,
         _request_timeout: Union[
@@ -796,11 +796,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -808,7 +808,7 @@ class DefaultApi:
 
 
     @validate_call
-    def change_password_post_without_preload_content(
+    async def change_password_post_without_preload_content(
         self,
         change_password_post_request: ChangePasswordPostRequest,
         _request_timeout: Union[
@@ -869,7 +869,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -954,7 +954,7 @@ class DefaultApi:
 
 
     @validate_call
-    def delete_user_callback_get(
+    async def delete_user_callback_get(
         self,
         token: Optional[StrictStr] = None,
         callback_url: Optional[StrictStr] = None,
@@ -1019,11 +1019,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1031,7 +1031,7 @@ class DefaultApi:
 
 
     @validate_call
-    def delete_user_callback_get_with_http_info(
+    async def delete_user_callback_get_with_http_info(
         self,
         token: Optional[StrictStr] = None,
         callback_url: Optional[StrictStr] = None,
@@ -1096,11 +1096,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1108,7 +1108,7 @@ class DefaultApi:
 
 
     @validate_call
-    def delete_user_callback_get_without_preload_content(
+    async def delete_user_callback_get_without_preload_content(
         self,
         token: Optional[StrictStr] = None,
         callback_url: Optional[StrictStr] = None,
@@ -1173,7 +1173,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1252,7 +1252,7 @@ class DefaultApi:
 
 
     @validate_call
-    def delete_user_post(
+    async def delete_user_post(
         self,
         delete_user_post_request: DeleteUserPostRequest,
         _request_timeout: Union[
@@ -1313,11 +1313,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1325,7 +1325,7 @@ class DefaultApi:
 
 
     @validate_call
-    def delete_user_post_with_http_info(
+    async def delete_user_post_with_http_info(
         self,
         delete_user_post_request: DeleteUserPostRequest,
         _request_timeout: Union[
@@ -1386,11 +1386,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1398,7 +1398,7 @@ class DefaultApi:
 
 
     @validate_call
-    def delete_user_post_without_preload_content(
+    async def delete_user_post_without_preload_content(
         self,
         delete_user_post_request: DeleteUserPostRequest,
         _request_timeout: Union[
@@ -1459,7 +1459,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1544,7 +1544,7 @@ class DefaultApi:
 
 
     @validate_call
-    def error_get(
+    async def error_get(
         self,
         _request_timeout: Union[
             None,
@@ -1601,11 +1601,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1613,7 +1613,7 @@ class DefaultApi:
 
 
     @validate_call
-    def error_get_with_http_info(
+    async def error_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -1670,11 +1670,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1682,7 +1682,7 @@ class DefaultApi:
 
 
     @validate_call
-    def error_get_without_preload_content(
+    async def error_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1739,7 +1739,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1809,7 +1809,7 @@ class DefaultApi:
 
 
     @validate_call
-    def forget_password_post(
+    async def forget_password_post(
         self,
         forget_password_post_request: ForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -1870,11 +1870,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1882,7 +1882,7 @@ class DefaultApi:
 
 
     @validate_call
-    def forget_password_post_with_http_info(
+    async def forget_password_post_with_http_info(
         self,
         forget_password_post_request: ForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -1943,11 +1943,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1955,7 +1955,7 @@ class DefaultApi:
 
 
     @validate_call
-    def forget_password_post_without_preload_content(
+    async def forget_password_post_without_preload_content(
         self,
         forget_password_post_request: ForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -2016,7 +2016,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2101,7 +2101,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_access_token_post(
+    async def get_access_token_post(
         self,
         refresh_token_post_request: RefreshTokenPostRequest,
         _request_timeout: Union[
@@ -2162,11 +2162,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2174,7 +2174,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_access_token_post_with_http_info(
+    async def get_access_token_post_with_http_info(
         self,
         refresh_token_post_request: RefreshTokenPostRequest,
         _request_timeout: Union[
@@ -2235,11 +2235,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2247,7 +2247,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_access_token_post_without_preload_content(
+    async def get_access_token_post_without_preload_content(
         self,
         refresh_token_post_request: RefreshTokenPostRequest,
         _request_timeout: Union[
@@ -2308,7 +2308,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2393,7 +2393,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_session_get(
+    async def get_session_get(
         self,
         _request_timeout: Union[
             None,
@@ -2450,11 +2450,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2462,7 +2462,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_session_get_with_http_info(
+    async def get_session_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -2519,11 +2519,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2531,7 +2531,7 @@ class DefaultApi:
 
 
     @validate_call
-    def get_session_get_without_preload_content(
+    async def get_session_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -2588,7 +2588,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2657,7 +2657,7 @@ class DefaultApi:
 
 
     @validate_call
-    def link_social_post(
+    async def link_social_post(
         self,
         link_social_post_request: LinkSocialPostRequest,
         _request_timeout: Union[
@@ -2718,11 +2718,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2730,7 +2730,7 @@ class DefaultApi:
 
 
     @validate_call
-    def link_social_post_with_http_info(
+    async def link_social_post_with_http_info(
         self,
         link_social_post_request: LinkSocialPostRequest,
         _request_timeout: Union[
@@ -2791,11 +2791,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2803,7 +2803,7 @@ class DefaultApi:
 
 
     @validate_call
-    def link_social_post_without_preload_content(
+    async def link_social_post_without_preload_content(
         self,
         link_social_post_request: LinkSocialPostRequest,
         _request_timeout: Union[
@@ -2864,7 +2864,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2949,7 +2949,7 @@ class DefaultApi:
 
 
     @validate_call
-    def list_accounts_get(
+    async def list_accounts_get(
         self,
         _request_timeout: Union[
             None,
@@ -3006,11 +3006,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3018,7 +3018,7 @@ class DefaultApi:
 
 
     @validate_call
-    def list_accounts_get_with_http_info(
+    async def list_accounts_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -3075,11 +3075,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3087,7 +3087,7 @@ class DefaultApi:
 
 
     @validate_call
-    def list_accounts_get_without_preload_content(
+    async def list_accounts_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -3144,7 +3144,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3213,7 +3213,7 @@ class DefaultApi:
 
 
     @validate_call
-    def list_sessions_get(
+    async def list_sessions_get(
         self,
         _request_timeout: Union[
             None,
@@ -3270,11 +3270,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3282,7 +3282,7 @@ class DefaultApi:
 
 
     @validate_call
-    def list_sessions_get_with_http_info(
+    async def list_sessions_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -3339,11 +3339,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3351,7 +3351,7 @@ class DefaultApi:
 
 
     @validate_call
-    def list_sessions_get_without_preload_content(
+    async def list_sessions_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -3408,7 +3408,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3477,7 +3477,7 @@ class DefaultApi:
 
 
     @validate_call
-    def ok_get(
+    async def ok_get(
         self,
         _request_timeout: Union[
             None,
@@ -3534,11 +3534,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3546,7 +3546,7 @@ class DefaultApi:
 
 
     @validate_call
-    def ok_get_with_http_info(
+    async def ok_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -3603,11 +3603,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3615,7 +3615,7 @@ class DefaultApi:
 
 
     @validate_call
-    def ok_get_without_preload_content(
+    async def ok_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -3672,7 +3672,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3741,7 +3741,7 @@ class DefaultApi:
 
 
     @validate_call
-    def refresh_token_post(
+    async def refresh_token_post(
         self,
         refresh_token_post_request: RefreshTokenPostRequest,
         _request_timeout: Union[
@@ -3802,11 +3802,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3814,7 +3814,7 @@ class DefaultApi:
 
 
     @validate_call
-    def refresh_token_post_with_http_info(
+    async def refresh_token_post_with_http_info(
         self,
         refresh_token_post_request: RefreshTokenPostRequest,
         _request_timeout: Union[
@@ -3875,11 +3875,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3887,7 +3887,7 @@ class DefaultApi:
 
 
     @validate_call
-    def refresh_token_post_without_preload_content(
+    async def refresh_token_post_without_preload_content(
         self,
         refresh_token_post_request: RefreshTokenPostRequest,
         _request_timeout: Union[
@@ -3948,7 +3948,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4033,7 +4033,7 @@ class DefaultApi:
 
 
     @validate_call
-    def request_password_reset_post(
+    async def request_password_reset_post(
         self,
         forget_password_post_request: ForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -4094,11 +4094,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4106,7 +4106,7 @@ class DefaultApi:
 
 
     @validate_call
-    def request_password_reset_post_with_http_info(
+    async def request_password_reset_post_with_http_info(
         self,
         forget_password_post_request: ForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -4167,11 +4167,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4179,7 +4179,7 @@ class DefaultApi:
 
 
     @validate_call
-    def request_password_reset_post_without_preload_content(
+    async def request_password_reset_post_without_preload_content(
         self,
         forget_password_post_request: ForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -4240,7 +4240,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4325,7 +4325,7 @@ class DefaultApi:
 
 
     @validate_call
-    def reset_password_post(
+    async def reset_password_post(
         self,
         reset_password_post_request: ResetPasswordPostRequest,
         _request_timeout: Union[
@@ -4386,11 +4386,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4398,7 +4398,7 @@ class DefaultApi:
 
 
     @validate_call
-    def reset_password_post_with_http_info(
+    async def reset_password_post_with_http_info(
         self,
         reset_password_post_request: ResetPasswordPostRequest,
         _request_timeout: Union[
@@ -4459,11 +4459,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4471,7 +4471,7 @@ class DefaultApi:
 
 
     @validate_call
-    def reset_password_post_without_preload_content(
+    async def reset_password_post_without_preload_content(
         self,
         reset_password_post_request: ResetPasswordPostRequest,
         _request_timeout: Union[
@@ -4532,7 +4532,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4617,7 +4617,7 @@ class DefaultApi:
 
 
     @validate_call
-    def reset_password_token_get(
+    async def reset_password_token_get(
         self,
         callback_url: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -4678,11 +4678,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4690,7 +4690,7 @@ class DefaultApi:
 
 
     @validate_call
-    def reset_password_token_get_with_http_info(
+    async def reset_password_token_get_with_http_info(
         self,
         callback_url: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -4751,11 +4751,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4763,7 +4763,7 @@ class DefaultApi:
 
 
     @validate_call
-    def reset_password_token_get_without_preload_content(
+    async def reset_password_token_get_without_preload_content(
         self,
         callback_url: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -4824,7 +4824,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4898,7 +4898,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_other_sessions_post(
+    async def revoke_other_sessions_post(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -4959,11 +4959,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4971,7 +4971,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_other_sessions_post_with_http_info(
+    async def revoke_other_sessions_post_with_http_info(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -5032,11 +5032,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5044,7 +5044,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_other_sessions_post_without_preload_content(
+    async def revoke_other_sessions_post_without_preload_content(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -5105,7 +5105,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -5190,7 +5190,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_session_post(
+    async def revoke_session_post(
         self,
         revoke_session_post_request: Optional[RevokeSessionPostRequest] = None,
         _request_timeout: Union[
@@ -5251,11 +5251,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5263,7 +5263,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_session_post_with_http_info(
+    async def revoke_session_post_with_http_info(
         self,
         revoke_session_post_request: Optional[RevokeSessionPostRequest] = None,
         _request_timeout: Union[
@@ -5324,11 +5324,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5336,7 +5336,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_session_post_without_preload_content(
+    async def revoke_session_post_without_preload_content(
         self,
         revoke_session_post_request: Optional[RevokeSessionPostRequest] = None,
         _request_timeout: Union[
@@ -5397,7 +5397,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -5482,7 +5482,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_sessions_post(
+    async def revoke_sessions_post(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -5543,11 +5543,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5555,7 +5555,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_sessions_post_with_http_info(
+    async def revoke_sessions_post_with_http_info(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -5616,11 +5616,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5628,7 +5628,7 @@ class DefaultApi:
 
 
     @validate_call
-    def revoke_sessions_post_without_preload_content(
+    async def revoke_sessions_post_without_preload_content(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -5689,7 +5689,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -5774,7 +5774,7 @@ class DefaultApi:
 
 
     @validate_call
-    def send_verification_email_post(
+    async def send_verification_email_post(
         self,
         send_verification_email_post_request: Optional[SendVerificationEmailPostRequest] = None,
         _request_timeout: Union[
@@ -5835,11 +5835,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5847,7 +5847,7 @@ class DefaultApi:
 
 
     @validate_call
-    def send_verification_email_post_with_http_info(
+    async def send_verification_email_post_with_http_info(
         self,
         send_verification_email_post_request: Optional[SendVerificationEmailPostRequest] = None,
         _request_timeout: Union[
@@ -5908,11 +5908,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -5920,7 +5920,7 @@ class DefaultApi:
 
 
     @validate_call
-    def send_verification_email_post_without_preload_content(
+    async def send_verification_email_post_without_preload_content(
         self,
         send_verification_email_post_request: Optional[SendVerificationEmailPostRequest] = None,
         _request_timeout: Union[
@@ -5981,7 +5981,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -6066,7 +6066,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_in_email_post(
+    async def sign_in_email_post(
         self,
         sign_in_email_post_request: SignInEmailPostRequest,
         _request_timeout: Union[
@@ -6127,11 +6127,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -6139,7 +6139,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_in_email_post_with_http_info(
+    async def sign_in_email_post_with_http_info(
         self,
         sign_in_email_post_request: SignInEmailPostRequest,
         _request_timeout: Union[
@@ -6200,11 +6200,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -6212,7 +6212,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_in_email_post_without_preload_content(
+    async def sign_in_email_post_without_preload_content(
         self,
         sign_in_email_post_request: SignInEmailPostRequest,
         _request_timeout: Union[
@@ -6273,7 +6273,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -6358,7 +6358,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_out_post(
+    async def sign_out_post(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -6419,11 +6419,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -6431,7 +6431,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_out_post_with_http_info(
+    async def sign_out_post_with_http_info(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -6492,11 +6492,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -6504,7 +6504,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_out_post_without_preload_content(
+    async def sign_out_post_without_preload_content(
         self,
         body: Optional[Dict[str, Any]] = None,
         _request_timeout: Union[
@@ -6565,7 +6565,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -6650,7 +6650,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_up_email_post(
+    async def sign_up_email_post(
         self,
         sign_up_email_post_request: Optional[SignUpEmailPostRequest] = None,
         _request_timeout: Union[
@@ -6712,11 +6712,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -6724,7 +6724,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_up_email_post_with_http_info(
+    async def sign_up_email_post_with_http_info(
         self,
         sign_up_email_post_request: Optional[SignUpEmailPostRequest] = None,
         _request_timeout: Union[
@@ -6786,11 +6786,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -6798,7 +6798,7 @@ class DefaultApi:
 
 
     @validate_call
-    def sign_up_email_post_without_preload_content(
+    async def sign_up_email_post_without_preload_content(
         self,
         sign_up_email_post_request: Optional[SignUpEmailPostRequest] = None,
         _request_timeout: Union[
@@ -6860,7 +6860,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -6945,7 +6945,7 @@ class DefaultApi:
 
 
     @validate_call
-    def social_sign_in(
+    async def social_sign_in(
         self,
         social_sign_in_request: SocialSignInRequest,
         _request_timeout: Union[
@@ -7006,11 +7006,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7018,7 +7018,7 @@ class DefaultApi:
 
 
     @validate_call
-    def social_sign_in_with_http_info(
+    async def social_sign_in_with_http_info(
         self,
         social_sign_in_request: SocialSignInRequest,
         _request_timeout: Union[
@@ -7079,11 +7079,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7091,7 +7091,7 @@ class DefaultApi:
 
 
     @validate_call
-    def social_sign_in_without_preload_content(
+    async def social_sign_in_without_preload_content(
         self,
         social_sign_in_request: SocialSignInRequest,
         _request_timeout: Union[
@@ -7152,7 +7152,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -7237,7 +7237,7 @@ class DefaultApi:
 
 
     @validate_call
-    def unlink_account_post(
+    async def unlink_account_post(
         self,
         unlink_account_post_request: UnlinkAccountPostRequest,
         _request_timeout: Union[
@@ -7298,11 +7298,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7310,7 +7310,7 @@ class DefaultApi:
 
 
     @validate_call
-    def unlink_account_post_with_http_info(
+    async def unlink_account_post_with_http_info(
         self,
         unlink_account_post_request: UnlinkAccountPostRequest,
         _request_timeout: Union[
@@ -7371,11 +7371,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7383,7 +7383,7 @@ class DefaultApi:
 
 
     @validate_call
-    def unlink_account_post_without_preload_content(
+    async def unlink_account_post_without_preload_content(
         self,
         unlink_account_post_request: UnlinkAccountPostRequest,
         _request_timeout: Union[
@@ -7444,7 +7444,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -7529,7 +7529,7 @@ class DefaultApi:
 
 
     @validate_call
-    def update_user_post(
+    async def update_user_post(
         self,
         update_user_post_request: Optional[UpdateUserPostRequest] = None,
         _request_timeout: Union[
@@ -7590,11 +7590,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7602,7 +7602,7 @@ class DefaultApi:
 
 
     @validate_call
-    def update_user_post_with_http_info(
+    async def update_user_post_with_http_info(
         self,
         update_user_post_request: Optional[UpdateUserPostRequest] = None,
         _request_timeout: Union[
@@ -7663,11 +7663,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7675,7 +7675,7 @@ class DefaultApi:
 
 
     @validate_call
-    def update_user_post_without_preload_content(
+    async def update_user_post_without_preload_content(
         self,
         update_user_post_request: Optional[UpdateUserPostRequest] = None,
         _request_timeout: Union[
@@ -7736,7 +7736,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -7821,7 +7821,7 @@ class DefaultApi:
 
 
     @validate_call
-    def verify_email_get(
+    async def verify_email_get(
         self,
         token: Annotated[StrictStr, Field(description="The token to verify the email")],
         callback_url: Annotated[Optional[StrictStr], Field(description="The URL to redirect to after email verification")] = None,
@@ -7886,11 +7886,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7898,7 +7898,7 @@ class DefaultApi:
 
 
     @validate_call
-    def verify_email_get_with_http_info(
+    async def verify_email_get_with_http_info(
         self,
         token: Annotated[StrictStr, Field(description="The token to verify the email")],
         callback_url: Annotated[Optional[StrictStr], Field(description="The URL to redirect to after email verification")] = None,
@@ -7963,11 +7963,11 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -7975,7 +7975,7 @@ class DefaultApi:
 
 
     @validate_call
-    def verify_email_get_without_preload_content(
+    async def verify_email_get_without_preload_content(
         self,
         token: Annotated[StrictStr, Field(description="The token to verify the email")],
         callback_url: Annotated[Optional[StrictStr], Field(description="The URL to redirect to after email verification")] = None,
@@ -8040,7 +8040,7 @@ class DefaultApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

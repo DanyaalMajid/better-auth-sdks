@@ -43,12 +43,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.McpApi(api_client)
 
     try:
-        api_response = api_instance.mcp_authorize_get()
+        api_response = await api_instance.mcp_authorize_get()
         print("The response of McpApi->mcp_authorize_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -117,12 +117,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.McpApi(api_client)
 
     try:
-        api_instance.mcp_get_session_get()
+        await api_instance.mcp_get_session_get()
     except Exception as e:
         print("Exception when calling McpApi->mcp_get_session_get: %s\n" % e)
 ```
@@ -192,13 +192,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.McpApi(api_client)
     mcp_register_post_request = better_auth.McpRegisterPostRequest() # McpRegisterPostRequest | 
 
     try:
-        api_response = api_instance.mcp_register_post(mcp_register_post_request)
+        api_response = await api_instance.mcp_register_post(mcp_register_post_request)
         print("The response of McpApi->mcp_register_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -270,12 +270,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.McpApi(api_client)
 
     try:
-        api_instance.mcp_token_post()
+        await api_instance.mcp_token_post()
     except Exception as e:
         print("Exception when calling McpApi->mcp_token_post: %s\n" % e)
 ```
@@ -341,12 +341,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.McpApi(api_client)
 
     try:
-        api_instance.well_known_oauth_authorization_server_get()
+        await api_instance.well_known_oauth_authorization_server_get()
     except Exception as e:
         print("Exception when calling McpApi->well_known_oauth_authorization_server_get: %s\n" % e)
 ```
@@ -412,12 +412,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.McpApi(api_client)
 
     try:
-        api_instance.well_known_oauth_protected_resource_get()
+        await api_instance.well_known_oauth_protected_resource_get()
     except Exception as e:
         print("Exception when calling McpApi->well_known_oauth_protected_resource_get: %s\n" % e)
 ```

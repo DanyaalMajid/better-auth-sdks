@@ -44,13 +44,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DeviceAuthorizationApi(api_client)
     device_approve_post_request = better_auth.DeviceApprovePostRequest() # DeviceApprovePostRequest | 
 
     try:
-        api_response = api_instance.device_approve_post(device_approve_post_request)
+        api_response = await api_instance.device_approve_post(device_approve_post_request)
         print("The response of DeviceAuthorizationApi->device_approve_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -128,13 +128,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DeviceAuthorizationApi(api_client)
     device_code_post_request = better_auth.DeviceCodePostRequest() # DeviceCodePostRequest | 
 
     try:
-        api_response = api_instance.device_code_post(device_code_post_request)
+        api_response = await api_instance.device_code_post(device_code_post_request)
         print("The response of DeviceAuthorizationApi->device_code_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -210,13 +210,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DeviceAuthorizationApi(api_client)
     device_deny_post_request = better_auth.DeviceDenyPostRequest() # DeviceDenyPostRequest | 
 
     try:
-        api_response = api_instance.device_deny_post(device_deny_post_request)
+        api_response = await api_instance.device_deny_post(device_deny_post_request)
         print("The response of DeviceAuthorizationApi->device_deny_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -291,13 +291,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DeviceAuthorizationApi(api_client)
     user_code = 'user_code_example' # str |  (optional)
 
     try:
-        api_response = api_instance.device_get(user_code=user_code)
+        api_response = await api_instance.device_get(user_code=user_code)
         print("The response of DeviceAuthorizationApi->device_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -375,13 +375,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DeviceAuthorizationApi(api_client)
     device_token_post_request = better_auth.DeviceTokenPostRequest() # DeviceTokenPostRequest | 
 
     try:
-        api_response = api_instance.device_token_post(device_token_post_request)
+        api_response = await api_instance.device_token_post(device_token_post_request)
         print("The response of DeviceAuthorizationApi->device_token_post:\n")
         pprint(api_response)
     except Exception as e:

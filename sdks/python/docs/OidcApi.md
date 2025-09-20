@@ -44,12 +44,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OidcApi(api_client)
 
     try:
-        api_response = api_instance.oauth2_authorize_get()
+        api_response = await api_instance.oauth2_authorize_get()
         print("The response of OidcApi->oauth2_authorize_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -121,12 +121,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OidcApi(api_client)
 
     try:
-        api_response = api_instance.oauth2_client_id_get()
+        api_response = await api_instance.oauth2_client_id_get()
         print("The response of OidcApi->oauth2_client_id_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -199,13 +199,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OidcApi(api_client)
     oauth2_consent_post_request = better_auth.Oauth2ConsentPostRequest() # Oauth2ConsentPostRequest | 
 
     try:
-        api_response = api_instance.oauth2_consent_post(oauth2_consent_post_request)
+        api_response = await api_instance.oauth2_consent_post(oauth2_consent_post_request)
         print("The response of OidcApi->oauth2_consent_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -281,13 +281,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OidcApi(api_client)
     oauth2_register_post_request = better_auth.Oauth2RegisterPostRequest() # Oauth2RegisterPostRequest | 
 
     try:
-        api_response = api_instance.oauth2_register_post(oauth2_register_post_request)
+        api_response = await api_instance.oauth2_register_post(oauth2_register_post_request)
         print("The response of OidcApi->oauth2_register_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -359,12 +359,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OidcApi(api_client)
 
     try:
-        api_instance.oauth2_token_post()
+        await api_instance.oauth2_token_post()
     except Exception as e:
         print("Exception when calling OidcApi->oauth2_token_post: %s\n" % e)
 ```
@@ -433,12 +433,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OidcApi(api_client)
 
     try:
-        api_response = api_instance.oauth2_userinfo_get()
+        api_response = await api_instance.oauth2_userinfo_get()
         print("The response of OidcApi->oauth2_userinfo_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -507,12 +507,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OidcApi(api_client)
 
     try:
-        api_instance.well_known_openid_configuration_get()
+        await api_instance.well_known_openid_configuration_get()
     except Exception as e:
         print("Exception when calling OidcApi->well_known_openid_configuration_get: %s\n" % e)
 ```

@@ -67,13 +67,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     account_info_post_request = better_auth.AccountInfoPostRequest() # AccountInfoPostRequest | 
 
     try:
-        api_response = api_instance.account_info_post(account_info_post_request)
+        api_response = await api_instance.account_info_post(account_info_post_request)
         print("The response of DefaultApi->account_info_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -147,13 +147,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     change_email_post_request = better_auth.ChangeEmailPostRequest() # ChangeEmailPostRequest | 
 
     try:
-        api_response = api_instance.change_email_post(change_email_post_request)
+        api_response = await api_instance.change_email_post(change_email_post_request)
         print("The response of DefaultApi->change_email_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -230,13 +230,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     change_password_post_request = better_auth.ChangePasswordPostRequest() # ChangePasswordPostRequest | 
 
     try:
-        api_response = api_instance.change_password_post(change_password_post_request)
+        api_response = await api_instance.change_password_post(change_password_post_request)
         print("The response of DefaultApi->change_password_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -311,14 +311,14 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     token = 'token_example' # str |  (optional)
     callback_url = 'callback_url_example' # str |  (optional)
 
     try:
-        api_response = api_instance.delete_user_callback_get(token=token, callback_url=callback_url)
+        api_response = await api_instance.delete_user_callback_get(token=token, callback_url=callback_url)
         print("The response of DefaultApi->delete_user_callback_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -395,13 +395,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     delete_user_post_request = better_auth.DeleteUserPostRequest() # DeleteUserPostRequest | 
 
     try:
-        api_response = api_instance.delete_user_post(delete_user_post_request)
+        api_response = await api_instance.delete_user_post(delete_user_post_request)
         print("The response of DefaultApi->delete_user_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -475,12 +475,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
 
     try:
-        api_response = api_instance.error_get()
+        api_response = await api_instance.error_get()
         print("The response of DefaultApi->error_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -553,13 +553,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     forget_password_post_request = better_auth.ForgetPasswordPostRequest() # ForgetPasswordPostRequest | 
 
     try:
-        api_response = api_instance.forget_password_post(forget_password_post_request)
+        api_response = await api_instance.forget_password_post(forget_password_post_request)
         print("The response of DefaultApi->forget_password_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -635,13 +635,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     refresh_token_post_request = better_auth.RefreshTokenPostRequest() # RefreshTokenPostRequest | 
 
     try:
-        api_response = api_instance.get_access_token_post(refresh_token_post_request)
+        api_response = await api_instance.get_access_token_post(refresh_token_post_request)
         print("The response of DefaultApi->get_access_token_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -716,12 +716,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
 
     try:
-        api_response = api_instance.get_session_get()
+        api_response = await api_instance.get_session_get()
         print("The response of DefaultApi->get_session_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -794,13 +794,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     link_social_post_request = better_auth.LinkSocialPostRequest() # LinkSocialPostRequest | 
 
     try:
-        api_response = api_instance.link_social_post(link_social_post_request)
+        api_response = await api_instance.link_social_post(link_social_post_request)
         print("The response of DefaultApi->link_social_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -875,12 +875,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
 
     try:
-        api_response = api_instance.list_accounts_get()
+        api_response = await api_instance.list_accounts_get()
         print("The response of DefaultApi->list_accounts_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -952,12 +952,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
 
     try:
-        api_response = api_instance.list_sessions_get()
+        api_response = await api_instance.list_sessions_get()
         print("The response of DefaultApi->list_sessions_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1029,12 +1029,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
 
     try:
-        api_response = api_instance.ok_get()
+        api_response = await api_instance.ok_get()
         print("The response of DefaultApi->ok_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1107,13 +1107,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     refresh_token_post_request = better_auth.RefreshTokenPostRequest() # RefreshTokenPostRequest | 
 
     try:
-        api_response = api_instance.refresh_token_post(refresh_token_post_request)
+        api_response = await api_instance.refresh_token_post(refresh_token_post_request)
         print("The response of DefaultApi->refresh_token_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1189,13 +1189,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     forget_password_post_request = better_auth.ForgetPasswordPostRequest() # ForgetPasswordPostRequest | 
 
     try:
-        api_response = api_instance.request_password_reset_post(forget_password_post_request)
+        api_response = await api_instance.request_password_reset_post(forget_password_post_request)
         print("The response of DefaultApi->request_password_reset_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1271,13 +1271,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     reset_password_post_request = better_auth.ResetPasswordPostRequest() # ResetPasswordPostRequest | 
 
     try:
-        api_response = api_instance.reset_password_post(reset_password_post_request)
+        api_response = await api_instance.reset_password_post(reset_password_post_request)
         print("The response of DefaultApi->reset_password_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1352,13 +1352,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     callback_url = 'callback_url_example' # str |  (optional)
 
     try:
-        api_response = api_instance.reset_password_token_get(callback_url=callback_url)
+        api_response = await api_instance.reset_password_token_get(callback_url=callback_url)
         print("The response of DefaultApi->reset_password_token_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1433,13 +1433,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     body = None # object |  (optional)
 
     try:
-        api_response = api_instance.revoke_other_sessions_post(body=body)
+        api_response = await api_instance.revoke_other_sessions_post(body=body)
         print("The response of DefaultApi->revoke_other_sessions_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1515,13 +1515,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     revoke_session_post_request = better_auth.RevokeSessionPostRequest() # RevokeSessionPostRequest |  (optional)
 
     try:
-        api_response = api_instance.revoke_session_post(revoke_session_post_request=revoke_session_post_request)
+        api_response = await api_instance.revoke_session_post(revoke_session_post_request=revoke_session_post_request)
         print("The response of DefaultApi->revoke_session_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1596,13 +1596,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     body = None # object |  (optional)
 
     try:
-        api_response = api_instance.revoke_sessions_post(body=body)
+        api_response = await api_instance.revoke_sessions_post(body=body)
         print("The response of DefaultApi->revoke_sessions_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1678,13 +1678,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     send_verification_email_post_request = better_auth.SendVerificationEmailPostRequest() # SendVerificationEmailPostRequest |  (optional)
 
     try:
-        api_response = api_instance.send_verification_email_post(send_verification_email_post_request=send_verification_email_post_request)
+        api_response = await api_instance.send_verification_email_post(send_verification_email_post_request=send_verification_email_post_request)
         print("The response of DefaultApi->send_verification_email_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1760,13 +1760,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     sign_in_email_post_request = better_auth.SignInEmailPostRequest() # SignInEmailPostRequest | 
 
     try:
-        api_response = api_instance.sign_in_email_post(sign_in_email_post_request)
+        api_response = await api_instance.sign_in_email_post(sign_in_email_post_request)
         print("The response of DefaultApi->sign_in_email_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1841,13 +1841,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     body = None # object |  (optional)
 
     try:
-        api_response = api_instance.sign_out_post(body=body)
+        api_response = await api_instance.sign_out_post(body=body)
         print("The response of DefaultApi->sign_out_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1923,13 +1923,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     sign_up_email_post_request = better_auth.SignUpEmailPostRequest() # SignUpEmailPostRequest |  (optional)
 
     try:
-        api_response = api_instance.sign_up_email_post(sign_up_email_post_request=sign_up_email_post_request)
+        api_response = await api_instance.sign_up_email_post(sign_up_email_post_request=sign_up_email_post_request)
         print("The response of DefaultApi->sign_up_email_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -2006,13 +2006,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     social_sign_in_request = better_auth.SocialSignInRequest() # SocialSignInRequest | 
 
     try:
-        api_response = api_instance.social_sign_in(social_sign_in_request)
+        api_response = await api_instance.social_sign_in(social_sign_in_request)
         print("The response of DefaultApi->social_sign_in:\n")
         pprint(api_response)
     except Exception as e:
@@ -2088,13 +2088,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     unlink_account_post_request = better_auth.UnlinkAccountPostRequest() # UnlinkAccountPostRequest | 
 
     try:
-        api_response = api_instance.unlink_account_post(unlink_account_post_request)
+        api_response = await api_instance.unlink_account_post(unlink_account_post_request)
         print("The response of DefaultApi->unlink_account_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -2170,13 +2170,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     update_user_post_request = better_auth.UpdateUserPostRequest() # UpdateUserPostRequest |  (optional)
 
     try:
-        api_response = api_instance.update_user_post(update_user_post_request=update_user_post_request)
+        api_response = await api_instance.update_user_post(update_user_post_request=update_user_post_request)
         print("The response of DefaultApi->update_user_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -2251,14 +2251,14 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.DefaultApi(api_client)
     token = 'token_example' # str | The token to verify the email
     callback_url = 'callback_url_example' # str | The URL to redirect to after email verification (optional)
 
     try:
-        api_response = api_instance.verify_email_get(token, callback_url=callback_url)
+        api_response = await api_instance.verify_email_get(token, callback_url=callback_url)
         print("The response of DefaultApi->verify_email_get:\n")
         pprint(api_response)
     except Exception as e:

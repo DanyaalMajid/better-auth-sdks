@@ -43,7 +43,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_authorize_get(
+    async def oauth2_authorize_get(
         self,
         _request_timeout: Union[
             None,
@@ -100,11 +100,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -112,7 +112,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_authorize_get_with_http_info(
+    async def oauth2_authorize_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -169,11 +169,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -181,7 +181,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_authorize_get_without_preload_content(
+    async def oauth2_authorize_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -238,7 +238,7 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -307,7 +307,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_client_id_get(
+    async def oauth2_client_id_get(
         self,
         _request_timeout: Union[
             None,
@@ -364,11 +364,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -376,7 +376,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_client_id_get_with_http_info(
+    async def oauth2_client_id_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -433,11 +433,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -445,7 +445,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_client_id_get_without_preload_content(
+    async def oauth2_client_id_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -502,7 +502,7 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -571,7 +571,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_consent_post(
+    async def oauth2_consent_post(
         self,
         oauth2_consent_post_request: Oauth2ConsentPostRequest,
         _request_timeout: Union[
@@ -632,11 +632,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -644,7 +644,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_consent_post_with_http_info(
+    async def oauth2_consent_post_with_http_info(
         self,
         oauth2_consent_post_request: Oauth2ConsentPostRequest,
         _request_timeout: Union[
@@ -705,11 +705,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -717,7 +717,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_consent_post_without_preload_content(
+    async def oauth2_consent_post_without_preload_content(
         self,
         oauth2_consent_post_request: Oauth2ConsentPostRequest,
         _request_timeout: Union[
@@ -778,7 +778,7 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -863,7 +863,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_register_post(
+    async def oauth2_register_post(
         self,
         oauth2_register_post_request: Oauth2RegisterPostRequest,
         _request_timeout: Union[
@@ -924,11 +924,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -936,7 +936,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_register_post_with_http_info(
+    async def oauth2_register_post_with_http_info(
         self,
         oauth2_register_post_request: Oauth2RegisterPostRequest,
         _request_timeout: Union[
@@ -997,11 +997,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1009,7 +1009,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_register_post_without_preload_content(
+    async def oauth2_register_post_without_preload_content(
         self,
         oauth2_register_post_request: Oauth2RegisterPostRequest,
         _request_timeout: Union[
@@ -1070,7 +1070,7 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1155,7 +1155,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_token_post(
+    async def oauth2_token_post(
         self,
         _request_timeout: Union[
             None,
@@ -1210,11 +1210,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1222,7 +1222,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_token_post_with_http_info(
+    async def oauth2_token_post_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -1277,11 +1277,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1289,7 +1289,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_token_post_without_preload_content(
+    async def oauth2_token_post_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1344,7 +1344,7 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1413,7 +1413,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_userinfo_get(
+    async def oauth2_userinfo_get(
         self,
         _request_timeout: Union[
             None,
@@ -1470,11 +1470,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1482,7 +1482,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_userinfo_get_with_http_info(
+    async def oauth2_userinfo_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -1539,11 +1539,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1551,7 +1551,7 @@ class OidcApi:
 
 
     @validate_call
-    def oauth2_userinfo_get_without_preload_content(
+    async def oauth2_userinfo_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1608,7 +1608,7 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1677,7 +1677,7 @@ class OidcApi:
 
 
     @validate_call
-    def well_known_openid_configuration_get(
+    async def well_known_openid_configuration_get(
         self,
         _request_timeout: Union[
             None,
@@ -1732,11 +1732,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1744,7 +1744,7 @@ class OidcApi:
 
 
     @validate_call
-    def well_known_openid_configuration_get_with_http_info(
+    async def well_known_openid_configuration_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -1799,11 +1799,11 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1811,7 +1811,7 @@ class OidcApi:
 
 
     @validate_call
-    def well_known_openid_configuration_get_without_preload_content(
+    async def well_known_openid_configuration_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1866,7 +1866,7 @@ class OidcApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

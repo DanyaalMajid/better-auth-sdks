@@ -54,13 +54,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     admin_has_permission_post_request = better_auth.AdminHasPermissionPostRequest() # AdminHasPermissionPostRequest |  (optional)
 
     try:
-        api_response = api_instance.admin_has_permission_post(admin_has_permission_post_request=admin_has_permission_post_request)
+        api_response = await api_instance.admin_has_permission_post(admin_has_permission_post_request=admin_has_permission_post_request)
         print("The response of AdminApi->admin_has_permission_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -132,12 +132,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
 
     try:
-        api_instance.admin_stop_impersonating_post()
+        await api_instance.admin_stop_impersonating_post()
     except Exception as e:
         print("Exception when calling AdminApi->admin_stop_impersonating_post: %s\n" % e)
 ```
@@ -207,13 +207,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     ban_user_request = better_auth.BanUserRequest() # BanUserRequest | 
 
     try:
-        api_response = api_instance.ban_user(ban_user_request)
+        api_response = await api_instance.ban_user(ban_user_request)
         print("The response of AdminApi->ban_user:\n")
         pprint(api_response)
     except Exception as e:
@@ -289,13 +289,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     create_user_request = better_auth.CreateUserRequest() # CreateUserRequest | 
 
     try:
-        api_response = api_instance.create_user(create_user_request)
+        api_response = await api_instance.create_user(create_user_request)
         print("The response of AdminApi->create_user:\n")
         pprint(api_response)
     except Exception as e:
@@ -370,13 +370,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     id = 'id_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_user(id=id)
+        api_response = await api_instance.get_user(id=id)
         print("The response of AdminApi->get_user:\n")
         pprint(api_response)
     except Exception as e:
@@ -452,13 +452,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     list_user_sessions_request = better_auth.ListUserSessionsRequest() # ListUserSessionsRequest | 
 
     try:
-        api_response = api_instance.impersonate_user(list_user_sessions_request)
+        api_response = await api_instance.impersonate_user(list_user_sessions_request)
         print("The response of AdminApi->impersonate_user:\n")
         pprint(api_response)
     except Exception as e:
@@ -534,13 +534,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     list_user_sessions_request = better_auth.ListUserSessionsRequest() # ListUserSessionsRequest | 
 
     try:
-        api_response = api_instance.list_user_sessions(list_user_sessions_request)
+        api_response = await api_instance.list_user_sessions(list_user_sessions_request)
         print("The response of AdminApi->list_user_sessions:\n")
         pprint(api_response)
     except Exception as e:
@@ -615,7 +615,7 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     search_value = 'search_value_example' # str |  (optional)
@@ -630,7 +630,7 @@ with better_auth.ApiClient(configuration) as api_client:
     filter_operator = 'filter_operator_example' # str |  (optional)
 
     try:
-        api_response = api_instance.list_users(search_value=search_value, search_field=search_field, search_operator=search_operator, limit=limit, offset=offset, sort_by=sort_by, sort_direction=sort_direction, filter_field=filter_field, filter_value=filter_value, filter_operator=filter_operator)
+        api_response = await api_instance.list_users(search_value=search_value, search_field=search_field, search_operator=search_operator, limit=limit, offset=offset, sort_by=sort_by, sort_direction=sort_direction, filter_field=filter_field, filter_value=filter_value, filter_operator=filter_operator)
         print("The response of AdminApi->list_users:\n")
         pprint(api_response)
     except Exception as e:
@@ -715,13 +715,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     list_user_sessions_request = better_auth.ListUserSessionsRequest() # ListUserSessionsRequest | 
 
     try:
-        api_response = api_instance.remove_user(list_user_sessions_request)
+        api_response = await api_instance.remove_user(list_user_sessions_request)
         print("The response of AdminApi->remove_user:\n")
         pprint(api_response)
     except Exception as e:
@@ -797,13 +797,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     revoke_user_session_request = better_auth.RevokeUserSessionRequest() # RevokeUserSessionRequest | 
 
     try:
-        api_response = api_instance.revoke_user_session(revoke_user_session_request)
+        api_response = await api_instance.revoke_user_session(revoke_user_session_request)
         print("The response of AdminApi->revoke_user_session:\n")
         pprint(api_response)
     except Exception as e:
@@ -879,13 +879,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     list_user_sessions_request = better_auth.ListUserSessionsRequest() # ListUserSessionsRequest | 
 
     try:
-        api_response = api_instance.revoke_user_sessions(list_user_sessions_request)
+        api_response = await api_instance.revoke_user_sessions(list_user_sessions_request)
         print("The response of AdminApi->revoke_user_sessions:\n")
         pprint(api_response)
     except Exception as e:
@@ -961,13 +961,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     set_role_request = better_auth.SetRoleRequest() # SetRoleRequest | 
 
     try:
-        api_response = api_instance.set_role(set_role_request)
+        api_response = await api_instance.set_role(set_role_request)
         print("The response of AdminApi->set_role:\n")
         pprint(api_response)
     except Exception as e:
@@ -1043,13 +1043,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     set_user_password_request = better_auth.SetUserPasswordRequest() # SetUserPasswordRequest | 
 
     try:
-        api_response = api_instance.set_user_password(set_user_password_request)
+        api_response = await api_instance.set_user_password(set_user_password_request)
         print("The response of AdminApi->set_user_password:\n")
         pprint(api_response)
     except Exception as e:
@@ -1125,13 +1125,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     list_user_sessions_request = better_auth.ListUserSessionsRequest() # ListUserSessionsRequest | 
 
     try:
-        api_response = api_instance.unban_user(list_user_sessions_request)
+        api_response = await api_instance.unban_user(list_user_sessions_request)
         print("The response of AdminApi->unban_user:\n")
         pprint(api_response)
     except Exception as e:
@@ -1207,13 +1207,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AdminApi(api_client)
     update_user_request = better_auth.UpdateUserRequest() # UpdateUserRequest | 
 
     try:
-        api_response = api_instance.update_user(update_user_request)
+        api_response = await api_instance.update_user(update_user_request)
         print("The response of AdminApi->update_user:\n")
         pprint(api_response)
     except Exception as e:

@@ -47,7 +47,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_delete_passkey_post(
+    async def passkey_delete_passkey_post(
         self,
         passkey_delete_passkey_post_request: PasskeyDeletePasskeyPostRequest,
         _request_timeout: Union[
@@ -108,11 +108,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -120,7 +120,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_delete_passkey_post_with_http_info(
+    async def passkey_delete_passkey_post_with_http_info(
         self,
         passkey_delete_passkey_post_request: PasskeyDeletePasskeyPostRequest,
         _request_timeout: Union[
@@ -181,11 +181,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -193,7 +193,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_delete_passkey_post_without_preload_content(
+    async def passkey_delete_passkey_post_without_preload_content(
         self,
         passkey_delete_passkey_post_request: PasskeyDeletePasskeyPostRequest,
         _request_timeout: Union[
@@ -254,7 +254,7 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -339,7 +339,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_generate_authenticate_options_post(
+    async def passkey_generate_authenticate_options_post(
         self,
         _request_timeout: Union[
             None,
@@ -396,11 +396,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -408,7 +408,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_generate_authenticate_options_post_with_http_info(
+    async def passkey_generate_authenticate_options_post_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -465,11 +465,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -477,7 +477,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_generate_authenticate_options_post_without_preload_content(
+    async def passkey_generate_authenticate_options_post_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -534,7 +534,7 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -603,7 +603,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_generate_register_options_get(
+    async def passkey_generate_register_options_get(
         self,
         _request_timeout: Union[
             None,
@@ -660,11 +660,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -672,7 +672,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_generate_register_options_get_with_http_info(
+    async def passkey_generate_register_options_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -729,11 +729,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -741,7 +741,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_generate_register_options_get_without_preload_content(
+    async def passkey_generate_register_options_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -798,7 +798,7 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -867,7 +867,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_list_user_passkeys_get(
+    async def passkey_list_user_passkeys_get(
         self,
         _request_timeout: Union[
             None,
@@ -924,11 +924,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -936,7 +936,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_list_user_passkeys_get_with_http_info(
+    async def passkey_list_user_passkeys_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -993,11 +993,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1005,7 +1005,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_list_user_passkeys_get_without_preload_content(
+    async def passkey_list_user_passkeys_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1062,7 +1062,7 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1131,7 +1131,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_update_passkey_post(
+    async def passkey_update_passkey_post(
         self,
         passkey_update_passkey_post_request: PasskeyUpdatePasskeyPostRequest,
         _request_timeout: Union[
@@ -1192,11 +1192,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1204,7 +1204,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_update_passkey_post_with_http_info(
+    async def passkey_update_passkey_post_with_http_info(
         self,
         passkey_update_passkey_post_request: PasskeyUpdatePasskeyPostRequest,
         _request_timeout: Union[
@@ -1265,11 +1265,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1277,7 +1277,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_update_passkey_post_without_preload_content(
+    async def passkey_update_passkey_post_without_preload_content(
         self,
         passkey_update_passkey_post_request: PasskeyUpdatePasskeyPostRequest,
         _request_timeout: Union[
@@ -1338,7 +1338,7 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1423,7 +1423,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_verify_authentication_post(
+    async def passkey_verify_authentication_post(
         self,
         passkey_verify_authentication_post_request: PasskeyVerifyAuthenticationPostRequest,
         _request_timeout: Union[
@@ -1484,11 +1484,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1496,7 +1496,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_verify_authentication_post_with_http_info(
+    async def passkey_verify_authentication_post_with_http_info(
         self,
         passkey_verify_authentication_post_request: PasskeyVerifyAuthenticationPostRequest,
         _request_timeout: Union[
@@ -1557,11 +1557,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1569,7 +1569,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_verify_authentication_post_without_preload_content(
+    async def passkey_verify_authentication_post_without_preload_content(
         self,
         passkey_verify_authentication_post_request: PasskeyVerifyAuthenticationPostRequest,
         _request_timeout: Union[
@@ -1630,7 +1630,7 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1715,7 +1715,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_verify_registration_post(
+    async def passkey_verify_registration_post(
         self,
         passkey_verify_registration_post_request: PasskeyVerifyRegistrationPostRequest,
         _request_timeout: Union[
@@ -1776,11 +1776,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1788,7 +1788,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_verify_registration_post_with_http_info(
+    async def passkey_verify_registration_post_with_http_info(
         self,
         passkey_verify_registration_post_request: PasskeyVerifyRegistrationPostRequest,
         _request_timeout: Union[
@@ -1849,11 +1849,11 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1861,7 +1861,7 @@ class PasskeyApi:
 
 
     @validate_call
-    def passkey_verify_registration_post_without_preload_content(
+    async def passkey_verify_registration_post_without_preload_content(
         self,
         passkey_verify_registration_post_request: PasskeyVerifyRegistrationPostRequest,
         _request_timeout: Union[
@@ -1922,7 +1922,7 @@ class PasskeyApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

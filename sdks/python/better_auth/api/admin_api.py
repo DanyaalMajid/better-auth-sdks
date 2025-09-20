@@ -53,7 +53,7 @@ class AdminApi:
 
 
     @validate_call
-    def admin_has_permission_post(
+    async def admin_has_permission_post(
         self,
         admin_has_permission_post_request: Optional[AdminHasPermissionPostRequest] = None,
         _request_timeout: Union[
@@ -114,11 +114,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -126,7 +126,7 @@ class AdminApi:
 
 
     @validate_call
-    def admin_has_permission_post_with_http_info(
+    async def admin_has_permission_post_with_http_info(
         self,
         admin_has_permission_post_request: Optional[AdminHasPermissionPostRequest] = None,
         _request_timeout: Union[
@@ -187,11 +187,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -199,7 +199,7 @@ class AdminApi:
 
 
     @validate_call
-    def admin_has_permission_post_without_preload_content(
+    async def admin_has_permission_post_without_preload_content(
         self,
         admin_has_permission_post_request: Optional[AdminHasPermissionPostRequest] = None,
         _request_timeout: Union[
@@ -260,7 +260,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -345,7 +345,7 @@ class AdminApi:
 
 
     @validate_call
-    def admin_stop_impersonating_post(
+    async def admin_stop_impersonating_post(
         self,
         _request_timeout: Union[
             None,
@@ -400,11 +400,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -412,7 +412,7 @@ class AdminApi:
 
 
     @validate_call
-    def admin_stop_impersonating_post_with_http_info(
+    async def admin_stop_impersonating_post_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -467,11 +467,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -479,7 +479,7 @@ class AdminApi:
 
 
     @validate_call
-    def admin_stop_impersonating_post_without_preload_content(
+    async def admin_stop_impersonating_post_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -534,7 +534,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -603,7 +603,7 @@ class AdminApi:
 
 
     @validate_call
-    def ban_user(
+    async def ban_user(
         self,
         ban_user_request: BanUserRequest,
         _request_timeout: Union[
@@ -664,11 +664,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -676,7 +676,7 @@ class AdminApi:
 
 
     @validate_call
-    def ban_user_with_http_info(
+    async def ban_user_with_http_info(
         self,
         ban_user_request: BanUserRequest,
         _request_timeout: Union[
@@ -737,11 +737,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -749,7 +749,7 @@ class AdminApi:
 
 
     @validate_call
-    def ban_user_without_preload_content(
+    async def ban_user_without_preload_content(
         self,
         ban_user_request: BanUserRequest,
         _request_timeout: Union[
@@ -810,7 +810,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -895,7 +895,7 @@ class AdminApi:
 
 
     @validate_call
-    def create_user(
+    async def create_user(
         self,
         create_user_request: CreateUserRequest,
         _request_timeout: Union[
@@ -956,11 +956,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -968,7 +968,7 @@ class AdminApi:
 
 
     @validate_call
-    def create_user_with_http_info(
+    async def create_user_with_http_info(
         self,
         create_user_request: CreateUserRequest,
         _request_timeout: Union[
@@ -1029,11 +1029,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1041,7 +1041,7 @@ class AdminApi:
 
 
     @validate_call
-    def create_user_without_preload_content(
+    async def create_user_without_preload_content(
         self,
         create_user_request: CreateUserRequest,
         _request_timeout: Union[
@@ -1102,7 +1102,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1187,7 +1187,7 @@ class AdminApi:
 
 
     @validate_call
-    def get_user(
+    async def get_user(
         self,
         id: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -1248,11 +1248,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1260,7 +1260,7 @@ class AdminApi:
 
 
     @validate_call
-    def get_user_with_http_info(
+    async def get_user_with_http_info(
         self,
         id: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -1321,11 +1321,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1333,7 +1333,7 @@ class AdminApi:
 
 
     @validate_call
-    def get_user_without_preload_content(
+    async def get_user_without_preload_content(
         self,
         id: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -1394,7 +1394,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1468,7 +1468,7 @@ class AdminApi:
 
 
     @validate_call
-    def impersonate_user(
+    async def impersonate_user(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -1529,11 +1529,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1541,7 +1541,7 @@ class AdminApi:
 
 
     @validate_call
-    def impersonate_user_with_http_info(
+    async def impersonate_user_with_http_info(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -1602,11 +1602,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1614,7 +1614,7 @@ class AdminApi:
 
 
     @validate_call
-    def impersonate_user_without_preload_content(
+    async def impersonate_user_without_preload_content(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -1675,7 +1675,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1760,7 +1760,7 @@ class AdminApi:
 
 
     @validate_call
-    def list_user_sessions(
+    async def list_user_sessions(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -1821,11 +1821,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1833,7 +1833,7 @@ class AdminApi:
 
 
     @validate_call
-    def list_user_sessions_with_http_info(
+    async def list_user_sessions_with_http_info(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -1894,11 +1894,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1906,7 +1906,7 @@ class AdminApi:
 
 
     @validate_call
-    def list_user_sessions_without_preload_content(
+    async def list_user_sessions_without_preload_content(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -1967,7 +1967,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2052,7 +2052,7 @@ class AdminApi:
 
 
     @validate_call
-    def list_users(
+    async def list_users(
         self,
         search_value: Optional[StrictStr] = None,
         search_field: Optional[StrictStr] = None,
@@ -2149,11 +2149,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2161,7 +2161,7 @@ class AdminApi:
 
 
     @validate_call
-    def list_users_with_http_info(
+    async def list_users_with_http_info(
         self,
         search_value: Optional[StrictStr] = None,
         search_field: Optional[StrictStr] = None,
@@ -2258,11 +2258,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2270,7 +2270,7 @@ class AdminApi:
 
 
     @validate_call
-    def list_users_without_preload_content(
+    async def list_users_without_preload_content(
         self,
         search_value: Optional[StrictStr] = None,
         search_field: Optional[StrictStr] = None,
@@ -2367,7 +2367,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2486,7 +2486,7 @@ class AdminApi:
 
 
     @validate_call
-    def remove_user(
+    async def remove_user(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -2547,11 +2547,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2559,7 +2559,7 @@ class AdminApi:
 
 
     @validate_call
-    def remove_user_with_http_info(
+    async def remove_user_with_http_info(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -2620,11 +2620,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2632,7 +2632,7 @@ class AdminApi:
 
 
     @validate_call
-    def remove_user_without_preload_content(
+    async def remove_user_without_preload_content(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -2693,7 +2693,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2778,7 +2778,7 @@ class AdminApi:
 
 
     @validate_call
-    def revoke_user_session(
+    async def revoke_user_session(
         self,
         revoke_user_session_request: RevokeUserSessionRequest,
         _request_timeout: Union[
@@ -2839,11 +2839,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2851,7 +2851,7 @@ class AdminApi:
 
 
     @validate_call
-    def revoke_user_session_with_http_info(
+    async def revoke_user_session_with_http_info(
         self,
         revoke_user_session_request: RevokeUserSessionRequest,
         _request_timeout: Union[
@@ -2912,11 +2912,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2924,7 +2924,7 @@ class AdminApi:
 
 
     @validate_call
-    def revoke_user_session_without_preload_content(
+    async def revoke_user_session_without_preload_content(
         self,
         revoke_user_session_request: RevokeUserSessionRequest,
         _request_timeout: Union[
@@ -2985,7 +2985,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3070,7 +3070,7 @@ class AdminApi:
 
 
     @validate_call
-    def revoke_user_sessions(
+    async def revoke_user_sessions(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -3131,11 +3131,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3143,7 +3143,7 @@ class AdminApi:
 
 
     @validate_call
-    def revoke_user_sessions_with_http_info(
+    async def revoke_user_sessions_with_http_info(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -3204,11 +3204,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3216,7 +3216,7 @@ class AdminApi:
 
 
     @validate_call
-    def revoke_user_sessions_without_preload_content(
+    async def revoke_user_sessions_without_preload_content(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -3277,7 +3277,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3362,7 +3362,7 @@ class AdminApi:
 
 
     @validate_call
-    def set_role(
+    async def set_role(
         self,
         set_role_request: SetRoleRequest,
         _request_timeout: Union[
@@ -3423,11 +3423,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3435,7 +3435,7 @@ class AdminApi:
 
 
     @validate_call
-    def set_role_with_http_info(
+    async def set_role_with_http_info(
         self,
         set_role_request: SetRoleRequest,
         _request_timeout: Union[
@@ -3496,11 +3496,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3508,7 +3508,7 @@ class AdminApi:
 
 
     @validate_call
-    def set_role_without_preload_content(
+    async def set_role_without_preload_content(
         self,
         set_role_request: SetRoleRequest,
         _request_timeout: Union[
@@ -3569,7 +3569,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3654,7 +3654,7 @@ class AdminApi:
 
 
     @validate_call
-    def set_user_password(
+    async def set_user_password(
         self,
         set_user_password_request: SetUserPasswordRequest,
         _request_timeout: Union[
@@ -3715,11 +3715,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3727,7 +3727,7 @@ class AdminApi:
 
 
     @validate_call
-    def set_user_password_with_http_info(
+    async def set_user_password_with_http_info(
         self,
         set_user_password_request: SetUserPasswordRequest,
         _request_timeout: Union[
@@ -3788,11 +3788,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3800,7 +3800,7 @@ class AdminApi:
 
 
     @validate_call
-    def set_user_password_without_preload_content(
+    async def set_user_password_without_preload_content(
         self,
         set_user_password_request: SetUserPasswordRequest,
         _request_timeout: Union[
@@ -3861,7 +3861,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3946,7 +3946,7 @@ class AdminApi:
 
 
     @validate_call
-    def unban_user(
+    async def unban_user(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -4007,11 +4007,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4019,7 +4019,7 @@ class AdminApi:
 
 
     @validate_call
-    def unban_user_with_http_info(
+    async def unban_user_with_http_info(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -4080,11 +4080,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4092,7 +4092,7 @@ class AdminApi:
 
 
     @validate_call
-    def unban_user_without_preload_content(
+    async def unban_user_without_preload_content(
         self,
         list_user_sessions_request: ListUserSessionsRequest,
         _request_timeout: Union[
@@ -4153,7 +4153,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -4238,7 +4238,7 @@ class AdminApi:
 
 
     @validate_call
-    def update_user(
+    async def update_user(
         self,
         update_user_request: UpdateUserRequest,
         _request_timeout: Union[
@@ -4299,11 +4299,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4311,7 +4311,7 @@ class AdminApi:
 
 
     @validate_call
-    def update_user_with_http_info(
+    async def update_user_with_http_info(
         self,
         update_user_request: UpdateUserRequest,
         _request_timeout: Union[
@@ -4372,11 +4372,11 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -4384,7 +4384,7 @@ class AdminApi:
 
 
     @validate_call
-    def update_user_without_preload_content(
+    async def update_user_without_preload_content(
         self,
         update_user_request: UpdateUserRequest,
         _request_timeout: Union[
@@ -4445,7 +4445,7 @@ class AdminApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

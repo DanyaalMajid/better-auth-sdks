@@ -59,13 +59,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_accept_invitation_post_request = better_auth.OrganizationAcceptInvitationPostRequest() # OrganizationAcceptInvitationPostRequest | 
 
     try:
-        api_response = api_instance.organization_accept_invitation_post(organization_accept_invitation_post_request)
+        api_response = await api_instance.organization_accept_invitation_post(organization_accept_invitation_post_request)
         print("The response of OrganizationApi->organization_accept_invitation_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -138,13 +138,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_cancel_invitation_post_request = better_auth.OrganizationCancelInvitationPostRequest() # OrganizationCancelInvitationPostRequest | 
 
     try:
-        api_instance.organization_cancel_invitation_post(organization_cancel_invitation_post_request)
+        await api_instance.organization_cancel_invitation_post(organization_cancel_invitation_post_request)
     except Exception as e:
         print("Exception when calling OrganizationApi->organization_cancel_invitation_post: %s\n" % e)
 ```
@@ -214,13 +214,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_check_slug_post_request = better_auth.OrganizationCheckSlugPostRequest() # OrganizationCheckSlugPostRequest | 
 
     try:
-        api_instance.organization_check_slug_post(organization_check_slug_post_request)
+        await api_instance.organization_check_slug_post(organization_check_slug_post_request)
     except Exception as e:
         print("Exception when calling OrganizationApi->organization_check_slug_post: %s\n" % e)
 ```
@@ -292,13 +292,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_create_post_request = better_auth.OrganizationCreatePostRequest() # OrganizationCreatePostRequest | 
 
     try:
-        api_response = api_instance.organization_create_post(organization_create_post_request)
+        api_response = await api_instance.organization_create_post(organization_create_post_request)
         print("The response of OrganizationApi->organization_create_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -373,13 +373,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_delete_post_request = better_auth.OrganizationDeletePostRequest() # OrganizationDeletePostRequest | 
 
     try:
-        api_response = api_instance.organization_delete_post(organization_delete_post_request)
+        api_response = await api_instance.organization_delete_post(organization_delete_post_request)
         print("The response of OrganizationApi->organization_delete_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -454,12 +454,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
 
     try:
-        api_response = api_instance.organization_get_active_member_get()
+        api_response = await api_instance.organization_get_active_member_get()
         print("The response of OrganizationApi->organization_get_active_member_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -530,12 +530,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
 
     try:
-        api_response = api_instance.organization_get_full_organization_get()
+        api_response = await api_instance.organization_get_full_organization_get()
         print("The response of OrganizationApi->organization_get_full_organization_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -607,13 +607,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     id = 'id_example' # str |  (optional)
 
     try:
-        api_response = api_instance.organization_get_invitation_get(id=id)
+        api_response = await api_instance.organization_get_invitation_get(id=id)
         print("The response of OrganizationApi->organization_get_invitation_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -689,13 +689,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     admin_has_permission_post_request = better_auth.AdminHasPermissionPostRequest() # AdminHasPermissionPostRequest |  (optional)
 
     try:
-        api_response = api_instance.organization_has_permission_post(admin_has_permission_post_request=admin_has_permission_post_request)
+        api_response = await api_instance.organization_has_permission_post(admin_has_permission_post_request=admin_has_permission_post_request)
         print("The response of OrganizationApi->organization_has_permission_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -771,13 +771,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_invite_member_post_request = better_auth.OrganizationInviteMemberPostRequest() # OrganizationInviteMemberPostRequest | 
 
     try:
-        api_response = api_instance.organization_invite_member_post(organization_invite_member_post_request)
+        api_response = await api_instance.organization_invite_member_post(organization_invite_member_post_request)
         print("The response of OrganizationApi->organization_invite_member_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -850,13 +850,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_leave_post_request = better_auth.OrganizationLeavePostRequest() # OrganizationLeavePostRequest | 
 
     try:
-        api_instance.organization_leave_post(organization_leave_post_request)
+        await api_instance.organization_leave_post(organization_leave_post_request)
     except Exception as e:
         print("Exception when calling OrganizationApi->organization_leave_post: %s\n" % e)
 ```
@@ -928,12 +928,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
 
     try:
-        api_response = api_instance.organization_list_get()
+        api_response = await api_instance.organization_list_get()
         print("The response of OrganizationApi->organization_list_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1002,12 +1002,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
 
     try:
-        api_instance.organization_list_invitations_get()
+        await api_instance.organization_list_invitations_get()
     except Exception as e:
         print("Exception when calling OrganizationApi->organization_list_invitations_get: %s\n" % e)
 ```
@@ -1073,12 +1073,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
 
     try:
-        api_instance.organization_list_members_get()
+        await api_instance.organization_list_members_get()
     except Exception as e:
         print("Exception when calling OrganizationApi->organization_list_members_get: %s\n" % e)
 ```
@@ -1144,12 +1144,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
 
     try:
-        api_instance.organization_list_user_invitations_get()
+        await api_instance.organization_list_user_invitations_get()
     except Exception as e:
         print("Exception when calling OrganizationApi->organization_list_user_invitations_get: %s\n" % e)
 ```
@@ -1219,13 +1219,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_reject_invitation_post_request = better_auth.OrganizationRejectInvitationPostRequest() # OrganizationRejectInvitationPostRequest | 
 
     try:
-        api_response = api_instance.organization_reject_invitation_post(organization_reject_invitation_post_request)
+        api_response = await api_instance.organization_reject_invitation_post(organization_reject_invitation_post_request)
         print("The response of OrganizationApi->organization_reject_invitation_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1301,13 +1301,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_remove_member_post_request = better_auth.OrganizationRemoveMemberPostRequest() # OrganizationRemoveMemberPostRequest | 
 
     try:
-        api_response = api_instance.organization_remove_member_post(organization_remove_member_post_request)
+        api_response = await api_instance.organization_remove_member_post(organization_remove_member_post_request)
         print("The response of OrganizationApi->organization_remove_member_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1382,13 +1382,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_set_active_post_request = better_auth.OrganizationSetActivePostRequest() # OrganizationSetActivePostRequest | 
 
     try:
-        api_response = api_instance.organization_set_active_post(organization_set_active_post_request)
+        api_response = await api_instance.organization_set_active_post(organization_set_active_post_request)
         print("The response of OrganizationApi->organization_set_active_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1464,13 +1464,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_update_member_role_post_request = better_auth.OrganizationUpdateMemberRolePostRequest() # OrganizationUpdateMemberRolePostRequest | 
 
     try:
-        api_response = api_instance.organization_update_member_role_post(organization_update_member_role_post_request)
+        api_response = await api_instance.organization_update_member_role_post(organization_update_member_role_post_request)
         print("The response of OrganizationApi->organization_update_member_role_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1545,13 +1545,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.OrganizationApi(api_client)
     organization_update_post_request = better_auth.OrganizationUpdatePostRequest() # OrganizationUpdatePostRequest | 
 
     try:
-        api_response = api_instance.organization_update_post(organization_update_post_request)
+        api_response = await api_instance.organization_update_post(organization_update_post_request)
         print("The response of OrganizationApi->organization_update_post:\n")
         pprint(api_response)
     except Exception as e:

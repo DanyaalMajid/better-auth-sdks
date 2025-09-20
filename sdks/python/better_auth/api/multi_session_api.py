@@ -40,7 +40,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_list_device_sessions_get(
+    async def multi_session_list_device_sessions_get(
         self,
         _request_timeout: Union[
             None,
@@ -95,11 +95,11 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -107,7 +107,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_list_device_sessions_get_with_http_info(
+    async def multi_session_list_device_sessions_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -162,11 +162,11 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -174,7 +174,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_list_device_sessions_get_without_preload_content(
+    async def multi_session_list_device_sessions_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -229,7 +229,7 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -298,7 +298,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_revoke_post(
+    async def multi_session_revoke_post(
         self,
         multi_session_revoke_post_request: MultiSessionRevokePostRequest,
         _request_timeout: Union[
@@ -359,11 +359,11 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -371,7 +371,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_revoke_post_with_http_info(
+    async def multi_session_revoke_post_with_http_info(
         self,
         multi_session_revoke_post_request: MultiSessionRevokePostRequest,
         _request_timeout: Union[
@@ -432,11 +432,11 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -444,7 +444,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_revoke_post_without_preload_content(
+    async def multi_session_revoke_post_without_preload_content(
         self,
         multi_session_revoke_post_request: MultiSessionRevokePostRequest,
         _request_timeout: Union[
@@ -505,7 +505,7 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -590,7 +590,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_set_active_post(
+    async def multi_session_set_active_post(
         self,
         multi_session_set_active_post_request: MultiSessionSetActivePostRequest,
         _request_timeout: Union[
@@ -651,11 +651,11 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -663,7 +663,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_set_active_post_with_http_info(
+    async def multi_session_set_active_post_with_http_info(
         self,
         multi_session_set_active_post_request: MultiSessionSetActivePostRequest,
         _request_timeout: Union[
@@ -724,11 +724,11 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -736,7 +736,7 @@ class MultiSessionApi:
 
 
     @validate_call
-    def multi_session_set_active_post_without_preload_content(
+    async def multi_session_set_active_post_without_preload_content(
         self,
         multi_session_set_active_post_request: MultiSessionSetActivePostRequest,
         _request_timeout: Union[
@@ -797,7 +797,7 @@ class MultiSessionApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -46,7 +46,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_approve_post(
+    async def device_approve_post(
         self,
         device_approve_post_request: DeviceApprovePostRequest,
         _request_timeout: Union[
@@ -107,11 +107,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -119,7 +119,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_approve_post_with_http_info(
+    async def device_approve_post_with_http_info(
         self,
         device_approve_post_request: DeviceApprovePostRequest,
         _request_timeout: Union[
@@ -180,11 +180,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -192,7 +192,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_approve_post_without_preload_content(
+    async def device_approve_post_without_preload_content(
         self,
         device_approve_post_request: DeviceApprovePostRequest,
         _request_timeout: Union[
@@ -253,7 +253,7 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -338,7 +338,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_code_post(
+    async def device_code_post(
         self,
         device_code_post_request: DeviceCodePostRequest,
         _request_timeout: Union[
@@ -399,11 +399,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -411,7 +411,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_code_post_with_http_info(
+    async def device_code_post_with_http_info(
         self,
         device_code_post_request: DeviceCodePostRequest,
         _request_timeout: Union[
@@ -472,11 +472,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -484,7 +484,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_code_post_without_preload_content(
+    async def device_code_post_without_preload_content(
         self,
         device_code_post_request: DeviceCodePostRequest,
         _request_timeout: Union[
@@ -545,7 +545,7 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -630,7 +630,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_deny_post(
+    async def device_deny_post(
         self,
         device_deny_post_request: DeviceDenyPostRequest,
         _request_timeout: Union[
@@ -691,11 +691,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -703,7 +703,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_deny_post_with_http_info(
+    async def device_deny_post_with_http_info(
         self,
         device_deny_post_request: DeviceDenyPostRequest,
         _request_timeout: Union[
@@ -764,11 +764,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -776,7 +776,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_deny_post_without_preload_content(
+    async def device_deny_post_without_preload_content(
         self,
         device_deny_post_request: DeviceDenyPostRequest,
         _request_timeout: Union[
@@ -837,7 +837,7 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -922,7 +922,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_get(
+    async def device_get(
         self,
         user_code: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -983,11 +983,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -995,7 +995,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_get_with_http_info(
+    async def device_get_with_http_info(
         self,
         user_code: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -1056,11 +1056,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1068,7 +1068,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_get_without_preload_content(
+    async def device_get_without_preload_content(
         self,
         user_code: Optional[StrictStr] = None,
         _request_timeout: Union[
@@ -1129,7 +1129,7 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1203,7 +1203,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_token_post(
+    async def device_token_post(
         self,
         device_token_post_request: DeviceTokenPostRequest,
         _request_timeout: Union[
@@ -1264,11 +1264,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1276,7 +1276,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_token_post_with_http_info(
+    async def device_token_post_with_http_info(
         self,
         device_token_post_request: DeviceTokenPostRequest,
         _request_timeout: Union[
@@ -1337,11 +1337,11 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1349,7 +1349,7 @@ class DeviceAuthorizationApi:
 
 
     @validate_call
-    def device_token_post_without_preload_content(
+    async def device_token_post_without_preload_content(
         self,
         device_token_post_request: DeviceTokenPostRequest,
         _request_timeout: Union[
@@ -1410,7 +1410,7 @@ class DeviceAuthorizationApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

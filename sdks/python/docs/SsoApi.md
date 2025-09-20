@@ -44,13 +44,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.SsoApi(api_client)
     sign_in_sso_post_request = better_auth.SignInSsoPostRequest() # SignInSsoPostRequest |  (optional)
 
     try:
-        api_response = api_instance.sign_in_sso_post(sign_in_sso_post_request=sign_in_sso_post_request)
+        api_response = await api_instance.sign_in_sso_post(sign_in_sso_post_request=sign_in_sso_post_request)
         print("The response of SsoApi->sign_in_sso_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -124,7 +124,7 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.SsoApi(api_client)
     code = 'code_example' # str |  (optional)
@@ -133,7 +133,7 @@ with better_auth.ApiClient(configuration) as api_client:
     error_description = 'error_description_example' # str |  (optional)
 
     try:
-        api_instance.sso_callback_provider_id_get(code=code, state=state, error=error, error_description=error_description)
+        await api_instance.sso_callback_provider_id_get(code=code, state=state, error=error, error_description=error_description)
     except Exception as e:
         print("Exception when calling SsoApi->sso_callback_provider_id_get: %s\n" % e)
 ```
@@ -210,13 +210,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.SsoApi(api_client)
     sso_register_post_request = better_auth.SsoRegisterPostRequest() # SsoRegisterPostRequest | 
 
     try:
-        api_response = api_instance.sso_register_post(sso_register_post_request)
+        api_response = await api_instance.sso_register_post(sso_register_post_request)
         print("The response of SsoApi->sso_register_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -291,13 +291,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.SsoApi(api_client)
     sso_saml2_callback_provider_id_post_request = better_auth.SsoSaml2CallbackProviderIdPostRequest() # SsoSaml2CallbackProviderIdPostRequest | 
 
     try:
-        api_instance.sso_saml2_callback_provider_id_post(sso_saml2_callback_provider_id_post_request)
+        await api_instance.sso_saml2_callback_provider_id_post(sso_saml2_callback_provider_id_post_request)
     except Exception as e:
         print("Exception when calling SsoApi->sso_saml2_callback_provider_id_post: %s\n" % e)
 ```
@@ -369,14 +369,14 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.SsoApi(api_client)
     provider_id = 'provider_id_example' # str |  (optional)
     format = 'format_example' # str |  (optional)
 
     try:
-        api_instance.sso_saml2_sp_metadata_get(provider_id=provider_id, format=format)
+        await api_instance.sso_saml2_sp_metadata_get(provider_id=provider_id, format=format)
     except Exception as e:
         print("Exception when calling SsoApi->sso_saml2_sp_metadata_get: %s\n" % e)
 ```

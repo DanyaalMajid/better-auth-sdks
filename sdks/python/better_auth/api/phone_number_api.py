@@ -47,7 +47,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_forget_password_post(
+    async def phone_number_forget_password_post(
         self,
         phone_number_forget_password_post_request: PhoneNumberForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -108,11 +108,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -120,7 +120,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_forget_password_post_with_http_info(
+    async def phone_number_forget_password_post_with_http_info(
         self,
         phone_number_forget_password_post_request: PhoneNumberForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -181,11 +181,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -193,7 +193,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_forget_password_post_without_preload_content(
+    async def phone_number_forget_password_post_without_preload_content(
         self,
         phone_number_forget_password_post_request: PhoneNumberForgetPasswordPostRequest,
         _request_timeout: Union[
@@ -254,7 +254,7 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -339,7 +339,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_request_password_reset_post(
+    async def phone_number_request_password_reset_post(
         self,
         phone_number_request_password_reset_post_request: PhoneNumberRequestPasswordResetPostRequest,
         _request_timeout: Union[
@@ -400,11 +400,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -412,7 +412,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_request_password_reset_post_with_http_info(
+    async def phone_number_request_password_reset_post_with_http_info(
         self,
         phone_number_request_password_reset_post_request: PhoneNumberRequestPasswordResetPostRequest,
         _request_timeout: Union[
@@ -473,11 +473,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -485,7 +485,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_request_password_reset_post_without_preload_content(
+    async def phone_number_request_password_reset_post_without_preload_content(
         self,
         phone_number_request_password_reset_post_request: PhoneNumberRequestPasswordResetPostRequest,
         _request_timeout: Union[
@@ -546,7 +546,7 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -631,7 +631,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_reset_password_post(
+    async def phone_number_reset_password_post(
         self,
         phone_number_reset_password_post_request: PhoneNumberResetPasswordPostRequest,
         _request_timeout: Union[
@@ -692,11 +692,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -704,7 +704,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_reset_password_post_with_http_info(
+    async def phone_number_reset_password_post_with_http_info(
         self,
         phone_number_reset_password_post_request: PhoneNumberResetPasswordPostRequest,
         _request_timeout: Union[
@@ -765,11 +765,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -777,7 +777,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_reset_password_post_without_preload_content(
+    async def phone_number_reset_password_post_without_preload_content(
         self,
         phone_number_reset_password_post_request: PhoneNumberResetPasswordPostRequest,
         _request_timeout: Union[
@@ -838,7 +838,7 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -923,7 +923,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_send_otp_post(
+    async def phone_number_send_otp_post(
         self,
         phone_number_send_otp_post_request: PhoneNumberSendOtpPostRequest,
         _request_timeout: Union[
@@ -984,11 +984,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -996,7 +996,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_send_otp_post_with_http_info(
+    async def phone_number_send_otp_post_with_http_info(
         self,
         phone_number_send_otp_post_request: PhoneNumberSendOtpPostRequest,
         _request_timeout: Union[
@@ -1057,11 +1057,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1069,7 +1069,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_send_otp_post_without_preload_content(
+    async def phone_number_send_otp_post_without_preload_content(
         self,
         phone_number_send_otp_post_request: PhoneNumberSendOtpPostRequest,
         _request_timeout: Union[
@@ -1130,7 +1130,7 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1215,7 +1215,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_verify_post(
+    async def phone_number_verify_post(
         self,
         phone_number_verify_post_request: PhoneNumberVerifyPostRequest,
         _request_timeout: Union[
@@ -1276,11 +1276,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1288,7 +1288,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_verify_post_with_http_info(
+    async def phone_number_verify_post_with_http_info(
         self,
         phone_number_verify_post_request: PhoneNumberVerifyPostRequest,
         _request_timeout: Union[
@@ -1349,11 +1349,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1361,7 +1361,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def phone_number_verify_post_without_preload_content(
+    async def phone_number_verify_post_without_preload_content(
         self,
         phone_number_verify_post_request: PhoneNumberVerifyPostRequest,
         _request_timeout: Union[
@@ -1422,7 +1422,7 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1507,7 +1507,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def sign_in_phone_number_post(
+    async def sign_in_phone_number_post(
         self,
         sign_in_phone_number_post_request: SignInPhoneNumberPostRequest,
         _request_timeout: Union[
@@ -1568,11 +1568,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1580,7 +1580,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def sign_in_phone_number_post_with_http_info(
+    async def sign_in_phone_number_post_with_http_info(
         self,
         sign_in_phone_number_post_request: SignInPhoneNumberPostRequest,
         _request_timeout: Union[
@@ -1641,11 +1641,11 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1653,7 +1653,7 @@ class PhoneNumberApi:
 
 
     @validate_call
-    def sign_in_phone_number_post_without_preload_content(
+    async def sign_in_phone_number_post_without_preload_content(
         self,
         sign_in_phone_number_post_request: SignInPhoneNumberPostRequest,
         _request_timeout: Union[
@@ -1714,7 +1714,7 @@ class PhoneNumberApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -38,13 +38,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.UsernameApi(api_client)
     is_username_available_post_request = better_auth.IsUsernameAvailablePostRequest() # IsUsernameAvailablePostRequest | 
 
     try:
-        api_instance.is_username_available_post(is_username_available_post_request)
+        await api_instance.is_username_available_post(is_username_available_post_request)
     except Exception as e:
         print("Exception when calling UsernameApi->is_username_available_post: %s\n" % e)
 ```
@@ -117,13 +117,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.UsernameApi(api_client)
     sign_in_username_post_request = better_auth.SignInUsernamePostRequest() # SignInUsernamePostRequest | 
 
     try:
-        api_response = api_instance.sign_in_username_post(sign_in_username_post_request)
+        api_response = await api_instance.sign_in_username_post(sign_in_username_post_request)
         print("The response of UsernameApi->sign_in_username_post:\n")
         pprint(api_response)
     except Exception as e:

@@ -3,8 +3,9 @@
 	"scripts": {
 		"dev": "bun run --hot src/index.ts",
 		"start": "bun run src/index.ts",
-		"generate-sdk:python": "concurrently --success-first --kill-others \"pnpm run start\" \"openapi-generator-cli generate -i http://localhost:3000/api/auth/open-api/generate-schema -g python -o sdks/python -p packageName=better_auth --skip-validate-spec && pnpm run fix-sdk:python\"",
-		"fix-sdk:python": "node scripts/replace.js sdks/python/pyproject.toml \"NoLicense\" \"Unlicense\""
+		"generate:python": "openapi-generator-cli generate -i http://localhost:3000/api/auth/open-api/generate-schema -g python -o sdks/python -p packageName=better_auth --skip-validate-spec --library=asyncio",
+		"generate-sdk:python": "concurrently --success-first --kill-others \"pnpm run start\" \"pnpm run generate:python && pnpm run fix:python\"",
+		"fix:python": "node scripts/replace.js sdks/python/pyproject.toml \"NoLicense\" \"Unlicense\""
 	},
 	"dependencies": {
 		"@better-auth/sso": "^1.3.12",

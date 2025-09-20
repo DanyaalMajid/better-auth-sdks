@@ -46,13 +46,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PasskeyApi(api_client)
     passkey_delete_passkey_post_request = better_auth.PasskeyDeletePasskeyPostRequest() # PasskeyDeletePasskeyPostRequest | 
 
     try:
-        api_response = api_instance.passkey_delete_passkey_post(passkey_delete_passkey_post_request)
+        api_response = await api_instance.passkey_delete_passkey_post(passkey_delete_passkey_post_request)
         print("The response of PasskeyApi->passkey_delete_passkey_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -127,12 +127,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PasskeyApi(api_client)
 
     try:
-        api_response = api_instance.passkey_generate_authenticate_options_post()
+        api_response = await api_instance.passkey_generate_authenticate_options_post()
         print("The response of PasskeyApi->passkey_generate_authenticate_options_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -204,12 +204,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PasskeyApi(api_client)
 
     try:
-        api_response = api_instance.passkey_generate_register_options_get()
+        api_response = await api_instance.passkey_generate_register_options_get()
         print("The response of PasskeyApi->passkey_generate_register_options_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -281,12 +281,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PasskeyApi(api_client)
 
     try:
-        api_response = api_instance.passkey_list_user_passkeys_get()
+        api_response = await api_instance.passkey_list_user_passkeys_get()
         print("The response of PasskeyApi->passkey_list_user_passkeys_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -359,13 +359,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PasskeyApi(api_client)
     passkey_update_passkey_post_request = better_auth.PasskeyUpdatePasskeyPostRequest() # PasskeyUpdatePasskeyPostRequest | 
 
     try:
-        api_response = api_instance.passkey_update_passkey_post(passkey_update_passkey_post_request)
+        api_response = await api_instance.passkey_update_passkey_post(passkey_update_passkey_post_request)
         print("The response of PasskeyApi->passkey_update_passkey_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -441,13 +441,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PasskeyApi(api_client)
     passkey_verify_authentication_post_request = better_auth.PasskeyVerifyAuthenticationPostRequest() # PasskeyVerifyAuthenticationPostRequest | 
 
     try:
-        api_response = api_instance.passkey_verify_authentication_post(passkey_verify_authentication_post_request)
+        api_response = await api_instance.passkey_verify_authentication_post(passkey_verify_authentication_post_request)
         print("The response of PasskeyApi->passkey_verify_authentication_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -523,13 +523,13 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.PasskeyApi(api_client)
     passkey_verify_registration_post_request = better_auth.PasskeyVerifyRegistrationPostRequest() # PasskeyVerifyRegistrationPostRequest | 
 
     try:
-        api_response = api_instance.passkey_verify_registration_post(passkey_verify_registration_post_request)
+        api_response = await api_instance.passkey_verify_registration_post(passkey_verify_registration_post_request)
         print("The response of PasskeyApi->passkey_verify_registration_post:\n")
         pprint(api_response)
     except Exception as e:

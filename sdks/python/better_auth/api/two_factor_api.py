@@ -48,7 +48,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_disable_post(
+    async def two_factor_disable_post(
         self,
         two_factor_get_totp_uri_post_request: TwoFactorGetTotpUriPostRequest,
         _request_timeout: Union[
@@ -109,11 +109,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -121,7 +121,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_disable_post_with_http_info(
+    async def two_factor_disable_post_with_http_info(
         self,
         two_factor_get_totp_uri_post_request: TwoFactorGetTotpUriPostRequest,
         _request_timeout: Union[
@@ -182,11 +182,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -194,7 +194,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_disable_post_without_preload_content(
+    async def two_factor_disable_post_without_preload_content(
         self,
         two_factor_get_totp_uri_post_request: TwoFactorGetTotpUriPostRequest,
         _request_timeout: Union[
@@ -255,7 +255,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -340,7 +340,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_enable_post(
+    async def two_factor_enable_post(
         self,
         two_factor_enable_post_request: TwoFactorEnablePostRequest,
         _request_timeout: Union[
@@ -401,11 +401,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -413,7 +413,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_enable_post_with_http_info(
+    async def two_factor_enable_post_with_http_info(
         self,
         two_factor_enable_post_request: TwoFactorEnablePostRequest,
         _request_timeout: Union[
@@ -474,11 +474,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -486,7 +486,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_enable_post_without_preload_content(
+    async def two_factor_enable_post_without_preload_content(
         self,
         two_factor_enable_post_request: TwoFactorEnablePostRequest,
         _request_timeout: Union[
@@ -547,7 +547,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -632,7 +632,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_generate_backup_codes_post(
+    async def two_factor_generate_backup_codes_post(
         self,
         two_factor_generate_backup_codes_post_request: TwoFactorGenerateBackupCodesPostRequest,
         _request_timeout: Union[
@@ -693,11 +693,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -705,7 +705,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_generate_backup_codes_post_with_http_info(
+    async def two_factor_generate_backup_codes_post_with_http_info(
         self,
         two_factor_generate_backup_codes_post_request: TwoFactorGenerateBackupCodesPostRequest,
         _request_timeout: Union[
@@ -766,11 +766,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -778,7 +778,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_generate_backup_codes_post_without_preload_content(
+    async def two_factor_generate_backup_codes_post_without_preload_content(
         self,
         two_factor_generate_backup_codes_post_request: TwoFactorGenerateBackupCodesPostRequest,
         _request_timeout: Union[
@@ -839,7 +839,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -924,7 +924,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_get_totp_uri_post(
+    async def two_factor_get_totp_uri_post(
         self,
         two_factor_get_totp_uri_post_request: TwoFactorGetTotpUriPostRequest,
         _request_timeout: Union[
@@ -985,11 +985,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -997,7 +997,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_get_totp_uri_post_with_http_info(
+    async def two_factor_get_totp_uri_post_with_http_info(
         self,
         two_factor_get_totp_uri_post_request: TwoFactorGetTotpUriPostRequest,
         _request_timeout: Union[
@@ -1058,11 +1058,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1070,7 +1070,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_get_totp_uri_post_without_preload_content(
+    async def two_factor_get_totp_uri_post_without_preload_content(
         self,
         two_factor_get_totp_uri_post_request: TwoFactorGetTotpUriPostRequest,
         _request_timeout: Union[
@@ -1131,7 +1131,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1216,7 +1216,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_send_otp_post(
+    async def two_factor_send_otp_post(
         self,
         _request_timeout: Union[
             None,
@@ -1273,11 +1273,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1285,7 +1285,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_send_otp_post_with_http_info(
+    async def two_factor_send_otp_post_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -1342,11 +1342,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1354,7 +1354,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_send_otp_post_without_preload_content(
+    async def two_factor_send_otp_post_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -1411,7 +1411,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1480,7 +1480,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_backup_code_post(
+    async def two_factor_verify_backup_code_post(
         self,
         two_factor_verify_backup_code_post_request: TwoFactorVerifyBackupCodePostRequest,
         _request_timeout: Union[
@@ -1541,11 +1541,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1553,7 +1553,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_backup_code_post_with_http_info(
+    async def two_factor_verify_backup_code_post_with_http_info(
         self,
         two_factor_verify_backup_code_post_request: TwoFactorVerifyBackupCodePostRequest,
         _request_timeout: Union[
@@ -1614,11 +1614,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1626,7 +1626,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_backup_code_post_without_preload_content(
+    async def two_factor_verify_backup_code_post_without_preload_content(
         self,
         two_factor_verify_backup_code_post_request: TwoFactorVerifyBackupCodePostRequest,
         _request_timeout: Union[
@@ -1687,7 +1687,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1772,7 +1772,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_otp_post(
+    async def two_factor_verify_otp_post(
         self,
         two_factor_verify_otp_post_request: TwoFactorVerifyOtpPostRequest,
         _request_timeout: Union[
@@ -1833,11 +1833,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1845,7 +1845,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_otp_post_with_http_info(
+    async def two_factor_verify_otp_post_with_http_info(
         self,
         two_factor_verify_otp_post_request: TwoFactorVerifyOtpPostRequest,
         _request_timeout: Union[
@@ -1906,11 +1906,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1918,7 +1918,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_otp_post_without_preload_content(
+    async def two_factor_verify_otp_post_without_preload_content(
         self,
         two_factor_verify_otp_post_request: TwoFactorVerifyOtpPostRequest,
         _request_timeout: Union[
@@ -1979,7 +1979,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2064,7 +2064,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_totp_post(
+    async def two_factor_verify_totp_post(
         self,
         two_factor_verify_totp_post_request: TwoFactorVerifyTotpPostRequest,
         _request_timeout: Union[
@@ -2125,11 +2125,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2137,7 +2137,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_totp_post_with_http_info(
+    async def two_factor_verify_totp_post_with_http_info(
         self,
         two_factor_verify_totp_post_request: TwoFactorVerifyTotpPostRequest,
         _request_timeout: Union[
@@ -2198,11 +2198,11 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        response_data.read()
+        await response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2210,7 +2210,7 @@ class TwoFactorApi:
 
 
     @validate_call
-    def two_factor_verify_totp_post_without_preload_content(
+    async def two_factor_verify_totp_post_without_preload_content(
         self,
         two_factor_verify_totp_post_request: TwoFactorVerifyTotpPostRequest,
         _request_timeout: Union[
@@ -2271,7 +2271,7 @@ class TwoFactorApi:
             '429': "SocialSignIn403Response",
             '500': "SocialSignIn403Response",
         }
-        response_data = self.api_client.call_api(
+        response_data = await self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

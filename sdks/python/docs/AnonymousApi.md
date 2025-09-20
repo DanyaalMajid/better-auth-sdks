@@ -39,12 +39,12 @@ configuration = better_auth.Configuration(
 )
 
 # Enter a context with an instance of the API client
-with better_auth.ApiClient(configuration) as api_client:
+async with better_auth.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = better_auth.AnonymousApi(api_client)
 
     try:
-        api_response = api_instance.sign_in_anonymous_post()
+        api_response = await api_instance.sign_in_anonymous_post()
         print("The response of AnonymousApi->sign_in_anonymous_post:\n")
         pprint(api_response)
     except Exception as e:
